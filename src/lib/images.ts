@@ -104,6 +104,6 @@ export const pagePics: Record<string, Pic[]> = {
   "/faith-based-counseling": [pics.motherDaughter],
   "/christian-addiction-counseling": [pics.recovery],
   "/christian-counseling-for-depression": [pics.hope],
-  "/pastor-brandon-bankert": [pics.pastorPortrait, pics.pastorFamily, pics.ordination],
+  "/pastor-brandon-bankert": [pics.pastorFamily, pics.pastorPreaching, pics.ordination],
   "/areas": [pics.olderCouple],
 };

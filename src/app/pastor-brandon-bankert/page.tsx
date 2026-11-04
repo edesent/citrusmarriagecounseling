@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: { absolute: "Pastor Brandon Bankert – Christian Counselor in Hernando, FL" },
   description,
   alternates: { canonical: path },
-  openGraph: { title: "Pastor Brandon Bankert, Christian counselor in Hernando, FL", description, url: path, type: "profile", images: [{ url: pics.pastorPortrait.src, width: pics.pastorPortrait.w, height: pics.pastorPortrait.h, alt: pics.pastorPortrait.alt }] },
+  openGraph: { title: "Pastor Brandon Bankert, Christian counselor in Hernando, FL", description, url: path, type: "profile", images: [{ url: pics.pastorFamily.src, width: pics.pastorFamily.w, height: pics.pastorFamily.h, alt: pics.pastorFamily.alt }] },
 };
 
 /** His own words, from his pastor page at Bethel. */
@@ -45,7 +45,7 @@ export default function About() {
             Pastor of {church.name} in Hernando, husband since {pastor.marriedSince}, father of three, and the counselor you will sit down with.
           </p>
         }
-        photo={{ ...pics.pastorPortrait, fadeLeft: true }}
+        photo={pics.pastorFamily}
       />
 
       <section className="bg-paper">
@@ -91,10 +91,10 @@ export default function About() {
         <div className="wrap grid gap-6 py-14 md:grid-cols-2 md:py-20">
           <figure className="overflow-hidden rounded-[1.75rem]">
             <Image
-              src={pics.pastorFamily.src}
-              alt={pics.pastorFamily.alt}
-              width={pics.pastorFamily.w}
-              height={pics.pastorFamily.h}
+              src={pics.pastorPreaching.src}
+              alt={pics.pastorPreaching.alt}
+              width={pics.pastorPreaching.w}
+              height={pics.pastorPreaching.h}
               sizes="(min-width: 768px) 45vw, 100vw"
               className="h-full w-full object-cover"
             />
