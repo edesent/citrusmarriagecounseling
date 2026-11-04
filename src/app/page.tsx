@@ -1,0 +1,267 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import Braid from "@/components/Braid";
+import CountyMap from "@/components/CountyMap";
+import CtaBand from "@/components/CtaBand";
+import Faq from "@/components/Faq";
+import { allPlaces } from "@/lib/areas";
+import { faq } from "@/lib/faqs";
+import { money, pastor, phone, pricing, siteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: siteUrl },
+};
+
+/** What people actually say when they call, and what Pastor Brandon helps with. */
+const struggles = [
+  { said: "We can’t talk without it turning into a fight.", about: "Communication and conflict: learning to listen, to answer softly, and to settle things before the sun goes down." },
+  { said: "I don’t know if I can trust you again.", about: "After an affair, lies or a secret: repentance, forgiveness, and the slow work of rebuilding trust." },
+  { said: "Money is tearing us apart.", about: "Debt, spending, one earner or two: getting on the same page and making a plan you both keep." },
+  { said: "We’re living like roommates.", about: "Distance and dryness: finding your way back to friendship, tenderness and intimacy." },
+  { said: "His family, her family, our kids.", about: "In-laws, stepchildren, adult children and grandchildren: whose voice comes first, and how to say so kindly." },
+  { said: "Retirement changed everything.", about: "A new season: sharing a house all day, a health crisis, caring for a parent, or a second marriage later in life." },
+  { said: "One of us is far from God.", about: "Faith differences: loving a spouse who doesn’t share your faith, or who has drifted from it." },
+  { said: "We’re getting married.", about: "Premarital counseling: eight sessions to lay a foundation before the wedding." },
+];
+
+const steps = [
+  {
+    n: "1",
+    h: "A free consultation",
+    p: "Tell Pastor Brandon what is going on. He will tell you honestly whether and how he can help, and what it would involve. There is no cost and nothing to sign.",
+  },
+  {
+    n: "2",
+    h: "A set of sessions",
+    p: "Counseling is a set number of sessions, about an hour each, at Bethel Baptist Church in Hernando. You know the plan and the cost before you begin.",
+  },
+  {
+    n: "3",
+    h: "Counsel from Scripture",
+    p: "Each session brings the Bible to bear on your situation, practically, with things to work on at home between sessions.",
+  },
+];
+
+export default function Home() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-spring text-white">
+        <div className="wrap grid items-end gap-10 pt-10 md:pt-14 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14">
+          <div className="pb-10 lg:pb-20">
+            <p className="eyebrow text-brass-light">Hernando · Inverness · all of Citrus County</p>
+            <h1 className="display mt-4 text-[2.75rem] sm:text-6xl lg:text-[4.6rem]">
+              Christian marriage counseling in Citrus County, Florida
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-white/85 md:text-xl">
+              Sit down with {pastor.styled} at Bethel Baptist Church in Hernando. Honest, Bible-based counsel for couples who are struggling, and for
+              couples getting ready to marry. Your first consultation is free.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link href="/free-consultation" className="btn btn-brass text-base">
+                Book a free consultation
+              </Link>
+              <a href={`tel:${phone.tel}`} className="btn btn-line text-white">
+                Call <span className="num">{phone.display}</span>
+              </a>
+            </div>
+            <p className="mt-6 text-white/70">
+              Premarital counseling <span className="num font-semibold text-white">{money(pricing.premaritalSession)}</span> a session ·{" "}
+              <Link href="/faith-based-counseling" className="link text-white/90">
+                faith-based counseling
+              </Link>{" "}
+              for individuals and families too
+            </p>
+          </div>
+          <figure className="relative mx-auto w-full max-w-md self-end lg:max-w-none">
+            <div className="relative overflow-hidden rounded-t-[2.5rem] ring-1 ring-white/10">
+              <Image
+                src="/photos/pastor-brandon-bankert.jpg"
+                alt="Pastor Brandon Bankert of Bethel Baptist Church, Hernando, Florida"
+                width={840}
+                height={1050}
+                priority
+                sizes="(min-width: 1024px) 38vw, (min-width: 640px) 28rem, 100vw"
+                className="h-auto w-full"
+              />
+              {/* Softens the photo's left edge, where his wife stood beside him in the original. */}
+              <span className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-spring to-transparent" aria-hidden />
+            </div>
+            <figcaption className="absolute bottom-5 left-5 right-5 rounded-2xl bg-spring-deep/92 p-4 text-sm shadow-xl ring-1 ring-white/10 sm:left-auto sm:max-w-[17rem]">
+              <span className="display-soft block text-lg text-white">{pastor.styled}</span>
+              <span className="text-white/75">
+                Married since <span className="num">{pastor.marriedSince}</span>, father of three, pastor of Bethel Baptist Church
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+        <Braid id="braid-home-hero" gap="var(--spring)" className="block" />
+      </section>
+
+      {/* What people bring */}
+      <section className="bg-paper">
+        <div className="wrap py-16 md:py-24">
+          <div className="max-w-3xl">
+            <p className="eyebrow text-brass-deep">What couples bring to him</p>
+            <h2 className="display mt-3 text-4xl md:text-5xl">You are not the first to say it out loud.</h2>
+            <p className="mt-4 text-lg text-ink/75">
+              Most couples wait years before they ask for help. Here is what couples say when they finally do, and what Christian marriage
+              counseling with Pastor Brandon works on.
+            </p>
+          </div>
+          <ul className="mt-12 grid gap-x-12 gap-y-9 md:grid-cols-2">
+            {struggles.map((s) => (
+              <li key={s.said} className="border-t-2 border-brass/40 pt-5">
+                <p className="serif-italic text-2xl leading-snug text-spring-deep md:text-[1.7rem]">“{s.said}”</p>
+                <p className="mt-2 text-ink/75">{s.about}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-12">
+            <Link href="/christian-marriage-counseling" className="btn btn-spring">
+              How Christian marriage counseling works
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="bg-cream">
+        <div className="wrap py-16 md:py-24">
+          <p className="eyebrow text-brass-deep">How it works</p>
+          <h2 className="display mt-3 max-w-3xl text-4xl md:text-5xl">Three steps, and the first one is free.</h2>
+          <ol className="mt-12 grid gap-10 md:grid-cols-3">
+            {steps.map((s) => (
+              <li key={s.n}>
+                <span className="display block text-7xl text-brass">{s.n}</span>
+                <h3 className="display-soft mt-2 text-2xl">{s.h}</h3>
+                <p className="mt-2 text-ink/75">{s.p}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Premarital */}
+      <section className="bg-paper">
+        <div className="wrap grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
+          <figure className="overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-50px_rgba(11,43,40,0.8)]">
+            <Image
+              src="/photos/open-bible.jpg"
+              alt="An open King James Bible with a pen resting on the page"
+              width={1600}
+              height={1200}
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="h-auto w-full"
+            />
+          </figure>
+          <div>
+            <p className="eyebrow text-brass-deep">Premarital counseling</p>
+            <h2 className="display mt-3 text-4xl md:text-5xl">Getting married in Citrus County?</h2>
+            <p className="mt-5 flex items-baseline gap-3">
+              <span className="num text-5xl font-extrabold tracking-tight text-spring">{money(pricing.premaritalSession)}</span>
+              <span className="text-lg text-ink/70">a session, {pricing.premaritalSessions} sessions before the wedding</span>
+            </p>
+            <p className="mt-5 text-lg text-ink/80">
+              Talk through the things couples fight about later while it is still easy: how you will handle money, conflict, family, children, faith and
+              the roles you each expect, with a pastor who has been married since {pastor.marriedSince}.
+            </p>
+            <p className="mt-4 text-ink/75">
+              In Florida, couples who finish a registered premarital course before they apply for a license pay a smaller fee and skip the three-day
+              wait. Ask Pastor Brandon about the course certificate at your consultation.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link href="/premarital-counseling" className="btn btn-spring">
+                Premarital counseling
+              </Link>
+              <Link href="/free-consultation" className="btn btn-line text-spring">
+                Free consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="bg-spring-deep text-white">
+        <div className="wrap grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[1.05fr_0.95fr]">
+          <div>
+            <p className="eyebrow text-brass-light">Your counselor</p>
+            <h2 className="display mt-3 text-4xl md:text-5xl">A pastor who is a husband and a father first.</h2>
+            <p className="mt-5 text-lg text-white/85">
+              Brandon Bankert graduated from {pastor.college} in {pastor.collegeYear} and served ten years as an assistant pastor and Christian school
+              teacher before Bethel Baptist Church called him as pastor. He and his wife have been married since {pastor.marriedSince} and are raising
+              three children.
+            </p>
+            <blockquote className="serif-italic mt-6 border-l-2 border-brass pl-5 text-2xl leading-snug text-brass-pale">“{pastor.heartLine}”</blockquote>
+            <Link href="/pastor-brandon-bankert" className="btn btn-brass mt-8">
+              About Pastor Brandon
+            </Link>
+          </div>
+          <figure className="overflow-hidden rounded-[2rem] ring-1 ring-white/10">
+            <Image
+              src="/photos/pastor-brandon-family.jpg"
+              alt="Pastor Brandon Bankert with his wife and children in front of the cross at Bethel Baptist Church"
+              width={1800}
+              height={1350}
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="h-auto w-full"
+            />
+          </figure>
+        </div>
+      </section>
+
+      {/* Faith-based counseling */}
+      <section className="bg-paper">
+        <div className="wrap grid gap-8 py-16 md:grid-cols-[1fr_1.2fr] md:py-20">
+          <h2 className="display text-4xl md:text-5xl">Not married, or coming on your own?</h2>
+          <div className="text-lg text-ink/80">
+            <p>
+              Pastor Brandon also offers faith-based counseling for individuals and families: grief, a hard decision, a strained relationship with a
+              grown child, or questions about God that won’t go away. It is the same free first conversation, the same Bible, and the same plain talk.
+            </p>
+            <Link href="/faith-based-counseling" className="btn btn-line mt-6 text-spring">
+              Faith-based counseling
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Areas */}
+      <section className="bg-cream">
+        <div className="wrap py-16 md:py-24">
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+            <div>
+              <p className="eyebrow text-brass-deep">Where</p>
+              <h2 className="display mt-3 text-4xl md:text-5xl">Counseling for every part of Citrus County.</h2>
+              <p className="mt-4 text-lg text-ink/75">
+                Pastor Brandon meets couples at Bethel Baptist Church on North McGee Drive in Hernando, minutes from Citrus Hills and Beverly Hills and
+                about twenty from Inverness, Lecanto and Crystal River.
+              </p>
+              <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-[0.95rem]">
+                {allPlaces.map((p) => (
+                  <li key={p.name}>
+                    <Link href={`/areas/${p.slug}`} className="link">
+                      {p.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <CountyMap id="home-map" />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-paper">
+        <div className="wrap py-16 md:py-24">
+          <Faq items={[faq.therapy, faq.members, faq.cost, faq.where, faq.confidential, faq.start]} />
+        </div>
+      </section>
+
+      <CtaBand />
+    </>
+  );
+}

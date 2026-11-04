@@ -1,0 +1,476 @@
+{
+ "church": [
+  28.896914,
+  -82.413731,
+  "2289, North McGee Drive, Hernando, Citrus County, Florida, 34442, United States"
+ ],
+ "places": {
+  "Inverness": {
+   "lat": 28.8358176,
+   "lon": -82.3303715,
+   "miles": 8.5,
+   "minutes": 16,
+   "roads": [
+    [
+     "US 41",
+     5.0
+    ],
+    [
+     "CR 486",
+     2.5
+    ],
+    [
+     "US 41; SR 44",
+     0.6
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ]
+   ],
+   "osm": "Inverness, Citrus County, Florida, United States"
+  },
+  "Inverness Highlands North": {
+   "lat": 28.8653997,
+   "lon": -82.3761398,
+   "miles": 4.9,
+   "minutes": 12,
+   "roads": [
+    [
+     "North Croft Avenue",
+     2.1
+    ],
+    [
+     "CR 486",
+     1.8
+    ],
+    [
+     "East Bradley Street",
+     0.4
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ]
+   ],
+   "osm": "Inverness Highlands North, Citrus County, Florida, United States"
+  },
+  "Inverness Highlands South": {
+   "lat": 28.799772,
+   "lon": -82.3378545,
+   "miles": 12.0,
+   "minutes": 23,
+   "roads": [
+    [
+     "US 41",
+     4.6
+    ],
+    [
+     "CR 581",
+     2.7
+    ],
+    [
+     "CR 486",
+     2.5
+    ],
+    [
+     "East Arbor Street",
+     0.9
+    ]
+   ],
+   "osm": "Inverness Highlands South, Citrus County, Florida, 34452, United States"
+  },
+  "Floral City": {
+   "lat": 28.7211775,
+   "lon": -82.3076709,
+   "miles": 17.0,
+   "minutes": 29,
+   "roads": [
+    [
+     "US 41",
+     14.2
+    ],
+    [
+     "CR 486",
+     2.5
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ]
+   ],
+   "osm": "Floral City, Jumeau, Citrus County, Florida, 34436, United States"
+  },
+  "Pineola": {
+   "lat": 28.6888788,
+   "lon": -82.272868,
+   "miles": 21.1,
+   "minutes": 39,
+   "roads": [
+    [
+     "US 41",
+     13.9
+    ],
+    [
+     "CR 39",
+     2.8
+    ],
+    [
+     "CR 486",
+     2.5
+    ],
+    [
+     "East Floral Park Drive",
+     1.6
+    ]
+   ],
+   "osm": "Pineola, Citrus County, Florida, 34661, United States"
+  },
+  "Hernando": {
+   "lat": 28.8999815,
+   "lon": -82.3745401,
+   "miles": 2.9,
+   "minutes": 6,
+   "roads": [
+    [
+     "CR 486",
+     2.5
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ],
+    [
+     "US 41",
+     0.1
+    ]
+   ],
+   "osm": "Hernando, Citrus County, Florida, United States"
+  },
+  "Citrus Hills": {
+   "lat": 28.8883146,
+   "lon": -82.4325971,
+   "miles": 2.3,
+   "minutes": 6,
+   "roads": [
+    [
+     "CR 486",
+     1.2
+    ],
+    [
+     "North Essex Avenue",
+     0.8
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ],
+    [
+     "East Glassboro Court",
+     0.1
+    ]
+   ],
+   "osm": "Citrus Hills, Citrus County, Florida, 34442, United States"
+  },
+  "Beverly Hills": {
+   "lat": 28.9203666,
+   "lon": -82.4636305,
+   "miles": 4.7,
+   "minutes": 11,
+   "roads": [
+    [
+     "CR 486",
+     1.9
+    ],
+    [
+     "Roosevelt Boulevard",
+     1.6
+    ],
+    [
+     "North Forest Ridge Boulevard",
+     0.9
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ]
+   ],
+   "osm": "Beverly Hills, Citrus County, Florida, 34465, United States"
+  },
+  "Lecanto": {
+   "lat": 28.8268794,
+   "lon": -82.5001564,
+   "miles": 11.0,
+   "minutes": 22,
+   "roads": [
+    [
+     "CR 491",
+     5.1
+    ],
+    [
+     "CR 486",
+     4.4
+    ],
+    [
+     "West Educational Path",
+     0.6
+    ],
+    [
+     "South Panther Pride Drive",
+     0.6
+    ]
+   ],
+   "osm": "Lecanto, Citrus County, Florida, United States"
+  },
+  "Black Diamond": {
+   "lat": 28.9124798,
+   "lon": -82.4859321,
+   "miles": 6.7,
+   "minutes": 14,
+   "roads": [
+    [
+     "CR 486",
+     4.4
+    ],
+    [
+     "CR 491",
+     1.2
+    ],
+    [
+     "West Black Diamond Circle",
+     0.8
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ]
+   ],
+   "osm": "Black Diamond, Citrus County, Florida, United States"
+  },
+  "Pine Ridge": {
+   "lat": 28.9324105,
+   "lon": -82.4989248,
+   "miles": 7.7,
+   "minutes": 19,
+   "roads": [
+    [
+     "CR 486",
+     1.9
+    ],
+    [
+     "West Mustang Boulevard",
+     1.9
+    ],
+    [
+     "Roosevelt Boulevard",
+     1.8
+    ],
+    [
+     "North Forest Ridge Boulevard",
+     0.9
+    ]
+   ],
+   "osm": "Pine Ridge, Citrus County, Florida, 34465, United States"
+  },
+  "Citrus Springs": {
+   "lat": 29.0004425,
+   "lon": -82.4559973,
+   "miles": 12.0,
+   "minutes": 21,
+   "roads": [
+    [
+     "US 41",
+     8.1
+    ],
+    [
+     "CR 486",
+     2.5
+    ],
+    [
+     "West Country Club Boulevard",
+     0.6
+    ],
+    [
+     "North Mendoza Way",
+     0.5
+    ]
+   ],
+   "osm": "Citrus Springs, Citrus County, Florida, United States"
+  },
+  "Holder": {
+   "lat": 28.9669232,
+   "lon": -82.4206532,
+   "miles": 8.4,
+   "minutes": 14,
+   "roads": [
+    [
+     "US 41",
+     5.4
+    ],
+    [
+     "CR 486",
+     2.5
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ],
+    [
+     "CR 491",
+     0.1
+    ]
+   ],
+   "osm": "Holder, Citrus County, Florida, 34445, United States"
+  },
+  "Crystal River": {
+   "lat": 28.902479,
+   "lon": -82.5926012,
+   "miles": 11.6,
+   "minutes": 21,
+   "roads": [
+    [
+     "CR 486",
+     8.3
+    ],
+    [
+     "SR 44",
+     2.4
+    ],
+    [
+     "US 19; US 98",
+     0.4
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ]
+   ],
+   "osm": "Crystal River, Citrus County, Florida, 34429, United States"
+  },
+  "Red Level": {
+   "lat": 28.9696982,
+   "lon": -82.6362142,
+   "miles": 17.1,
+   "minutes": 29,
+   "roads": [
+    [
+     "CR 486",
+     8.3
+    ],
+    [
+     "US 19; US 98",
+     6.1
+    ],
+    [
+     "SR 44",
+     2.4
+    ],
+    [
+     "North McGee Drive",
+     0.3
+    ]
+   ],
+   "osm": "Red Level, Citrus County, Florida, 34428, United States"
+  },
+  "Homosassa": {
+   "lat": 28.7813722,
+   "lon": -82.6151001,
+   "miles": 17.9,
+   "minutes": 37,
+   "roads": [
+    [
+     "CR 490",
+     8.4
+    ],
+    [
+     "CR 486",
+     4.4
+    ],
+    [
+     "CR 491",
+     2.9
+    ],
+    [
+     "West Yulee Drive",
+     1.0
+    ]
+   ],
+   "osm": "Homosassa, Citrus County, Florida, 34448, United States"
+  },
+  "Homosassa Springs": {
+   "lat": 28.8150599,
+   "lon": -82.5550449,
+   "miles": 12.7,
+   "minutes": 26,
+   "roads": [
+    [
+     "CR 490",
+     4.4
+    ],
+    [
+     "CR 486",
+     4.4
+    ],
+    [
+     "CR 491",
+     2.9
+    ],
+    [
+     "SR 44",
+     0.5
+    ]
+   ],
+   "osm": "Homosassa Springs, Citrus County, Florida, United States"
+  },
+  "Chassahowitzka": {
+   "lat": 28.7130421,
+   "lon": -82.5742656,
+   "miles": 27.8,
+   "minutes": 40,
+   "roads": [
+    [
+     "SR 589 Toll",
+     11.9
+    ],
+    [
+     "CR 486",
+     4.4
+    ],
+    [
+     "US 98",
+     4.2
+    ],
+    [
+     "CR 491",
+     2.9
+    ]
+   ],
+   "osm": "Chassahowitzka, Citrus County, Florida, 34446, United States"
+  },
+  "Sugarmill Woods": {
+   "lat": 28.7268048,
+   "lon": -82.5021572,
+   "miles": 26.9,
+   "minutes": 42,
+   "roads": [
+    [
+     "SR 589 Toll",
+     11.9
+    ],
+    [
+     "CR 486",
+     4.4
+    ],
+    [
+     "CR 491",
+     2.9
+    ],
+    [
+     "US 98",
+     1.9
+    ]
+   ],
+   "osm": "Sugarmill Woods, Citrus County, Florida, 34446, United States"
+  }
+ }
+}
