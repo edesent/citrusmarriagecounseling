@@ -49,16 +49,16 @@ export const pics = {
 
   // Illustrations
   marriageCouple: {
-    src: "/photos/christian-marriage-counseling-couple-citrus-county-fl.webp",
+    src: "/photos/christian-marriage-counseling-couple-sofa-citrus-county-fl.webp",
     w: 1536,
     h: 1024,
-    alt: "A husband and wife holding hands on a sofa during Christian marriage counseling, an open Bible and coffee mugs on the table",
+    alt: "A husband and wife holding hands on a sofa, listening during a Christian marriage counseling session",
   },
   engagedCouple: {
-    src: "/photos/christian-premarital-counseling-engaged-couple-florida.webp",
+    src: "/photos/premarital-counseling-engaged-couple-workbook-florida.webp",
     w: 1536,
     h: 1024,
-    alt: "An engaged couple laughing as they work through a premarital counseling workbook beside an open Bible",
+    alt: "An engaged couple laughing together as they fill in a premarital counseling workbook at the kitchen table",
   },
   motherDaughter: {
     src: "/photos/faith-based-counseling-mother-daughter-florida-porch.webp",
@@ -73,10 +73,10 @@ export const pics = {
     alt: "An older married couple walking hand in hand on a quiet Florida street lined with live oaks and Spanish moss",
   },
   praying: {
-    src: "/photos/christian-couple-praying-together-bible.webp",
+    src: "/photos/christian-couple-praying-together-kitchen-table.webp",
     w: 1536,
     h: 1024,
-    alt: "A husband and wife praying together, hands joined over an open Bible at the kitchen table",
+    alt: "A husband and wife praying together, hands joined on the kitchen table",
   },
 } satisfies Record<string, Pic>;
 
