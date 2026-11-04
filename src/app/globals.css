@@ -208,3 +208,9 @@ body {
     transform: rotate(45deg);
   }
 }
+
+/* The free-consultation popup (ConsultPopup.tsx). */
+.consult-dialog::backdrop {
+  background: rgb(11 43 40 / 0.72);
+  backdrop-filter: blur(3px);
+}

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import ChatPrompt from "@/components/ChatPrompt";
+import ConsultPopup from "@/components/ConsultPopup";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <ConsultPopup />
         <ChatPrompt />
         <Analytics />
         <JsonLd data={siteGraph()} />
