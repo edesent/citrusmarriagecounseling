@@ -47,7 +47,7 @@ export default function Header() {
                 {n.label}
               </Link>
             ))}
-            <Link href="/free-consultation" className="btn btn-spring ml-3 px-5 py-3 text-sm">
+            <Link href="/free-consultation" className="btn btn-lime ml-3 px-5 py-3 text-sm">
               Free consultation
             </Link>
           </nav>
@@ -87,7 +87,7 @@ export default function Header() {
               {n.label}
             </Link>
           ))}
-          <Link href="/free-consultation" className="btn btn-brass mt-8" tabIndex={open ? 0 : -1}>
+          <Link href="/free-consultation" className="btn btn-lime mt-8" tabIndex={open ? 0 : -1}>
             Book a free consultation
           </Link>
           <a href={`tel:${phone.tel}`} className="mt-4 text-center font-semibold text-brass-light" tabIndex={open ? 0 : -1}>

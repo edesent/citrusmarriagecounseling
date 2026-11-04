@@ -23,7 +23,7 @@ export default function CtaBand({ heading = "Start with a free conversation.", c
             </p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
-            <Link href="/free-consultation" className="btn btn-brass">
+            <Link href="/free-consultation" className="btn btn-lime">
               Book a free consultation
             </Link>
             <a href={`tel:${phone.tel}`} className="text-center font-semibold text-brass-light md:text-right">

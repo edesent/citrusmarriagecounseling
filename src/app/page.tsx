@@ -59,7 +59,7 @@ export default function Home() {
               couples getting ready to marry. Your first consultation is free.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/free-consultation" className="btn btn-brass text-base">
+              <Link href="/free-consultation" className="btn btn-lime text-base">
                 Book a free consultation
               </Link>
               <a href={`tel:${phone.tel}`} className="btn btn-line text-white">
@@ -198,7 +198,7 @@ export default function Home() {
               three children.
             </p>
             <blockquote className="serif-italic mt-6 border-l-2 border-brass pl-5 text-2xl leading-snug text-brass-pale">“{pastor.heartLine}”</blockquote>
-            <Link href="/pastor-brandon-bankert" className="btn btn-brass mt-8">
+            <Link href="/pastor-brandon-bankert" className="btn btn-lime mt-8">
               About Pastor Brandon
             </Link>
           </div>

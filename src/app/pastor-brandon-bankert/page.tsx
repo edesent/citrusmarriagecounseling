@@ -63,7 +63,7 @@ export default function About() {
               meet with him at the church on North McGee Drive in Hernando, and the first conversation is always free.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/free-consultation" className="btn btn-brass">
+              <Link href="/free-consultation" className="btn btn-lime">
                 Book a free consultation
               </Link>
               <Link href="/christian-marriage-counseling" className="btn btn-line text-spring">

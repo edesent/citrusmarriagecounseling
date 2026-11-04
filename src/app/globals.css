@@ -128,13 +128,14 @@ body {
   .btn:active {
     transform: translateY(1px);
   }
-  .btn-brass {
-    background: var(--brass);
-    color: #fff;
-    box-shadow: 0 14px 30px -16px rgba(125, 93, 15, 0.9);
+  /* The main call to action: lime, like the cord, with dark text (white on lime is too faint to read). */
+  .btn-lime {
+    background: var(--lime);
+    color: var(--spring-deep);
+    box-shadow: 0 14px 30px -16px rgba(108, 159, 42, 0.95);
   }
-  .btn-brass:hover {
-    background: var(--brass-deep);
+  .btn-lime:hover {
+    background: #b4dc5c;
   }
   .btn-spring {
     background: var(--spring);

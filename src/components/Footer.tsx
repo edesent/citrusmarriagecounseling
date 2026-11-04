@@ -39,7 +39,7 @@ export default function Footer() {
               {phone.display}
             </a>
           </address>
-          <Link href="/free-consultation" className="btn btn-brass mt-6">
+          <Link href="/free-consultation" className="btn btn-lime mt-6">
             Book a free consultation
           </Link>
         </div>
