@@ -4,6 +4,7 @@ import CountyMap from "@/components/CountyMap";
 import CtaBand from "@/components/CtaBand";
 import PageHero from "@/components/PageHero";
 import { areas } from "@/lib/areas";
+import { pics } from "@/lib/images";
 
 const path = "/areas";
 const description =
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: { absolute: "Christian Marriage Counseling Across Citrus County, FL | Areas Served" },
   description,
   alternates: { canonical: path },
-  openGraph: { title: "Christian marriage counseling across Citrus County, FL", description, url: path },
+  openGraph: { title: "Christian marriage counseling across Citrus County, FL", description, url: path, images: [{ url: pics.olderCouple.src, width: pics.olderCouple.w, height: pics.olderCouple.h, alt: pics.olderCouple.alt }] },
 };
 
 export default function Areas() {
@@ -22,6 +23,7 @@ export default function Areas() {
       <PageHero
         trail={[{ name: "Areas", path }]}
         eyebrow="Areas served"
+        photo={pics.olderCouple}
         title="Christian marriage counseling near you in Citrus County"
         lede={
           <p>

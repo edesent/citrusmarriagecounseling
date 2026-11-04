@@ -4,6 +4,7 @@ import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
+import { pics } from "@/lib/images";
 import { ids } from "@/lib/schema";
 import { church, pastor, siteUrl } from "@/lib/site";
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: { absolute: "Pastor Brandon Bankert – Christian Counselor in Hernando, FL" },
   description,
   alternates: { canonical: path },
-  openGraph: { title: "Pastor Brandon Bankert, Christian counselor in Hernando, FL", description, url: path, type: "profile" },
+  openGraph: { title: "Pastor Brandon Bankert, Christian counselor in Hernando, FL", description, url: path, type: "profile", images: [{ url: pics.pastorPortrait.src, width: pics.pastorPortrait.w, height: pics.pastorPortrait.h, alt: pics.pastorPortrait.alt }] },
 };
 
 /** His own words, from his pastor page at Bethel. */
@@ -44,7 +45,7 @@ export default function About() {
             Pastor of {church.name} in Hernando, husband since {pastor.marriedSince}, father of three, and the counselor you will sit down with.
           </p>
         }
-        photo={{ src: "/photos/pastor-brandon-bankert.jpg", alt: "Pastor Brandon Bankert", w: 840, h: 1050, fadeLeft: true }}
+        photo={{ ...pics.pastorPortrait, fadeLeft: true }}
       />
 
       <section className="bg-paper">
@@ -90,20 +91,20 @@ export default function About() {
         <div className="wrap grid gap-6 py-14 md:grid-cols-2 md:py-20">
           <figure className="overflow-hidden rounded-[1.75rem]">
             <Image
-              src="/photos/pastor-brandon-family.jpg"
-              alt="Pastor Brandon Bankert with his wife and children in front of the cross at Bethel Baptist Church"
-              width={1800}
-              height={1350}
+              src={pics.pastorFamily.src}
+              alt={pics.pastorFamily.alt}
+              width={pics.pastorFamily.w}
+              height={pics.pastorFamily.h}
               sizes="(min-width: 768px) 45vw, 100vw"
               className="h-full w-full object-cover"
             />
           </figure>
           <figure className="overflow-hidden rounded-[1.75rem]">
             <Image
-              src="/photos/ordination.jpg"
-              alt="Pastors laying hands on Brandon Bankert at his ordination, December 2025"
-              width={1188}
-              height={1280}
+              src={pics.ordination.src}
+              alt={pics.ordination.alt}
+              width={pics.ordination.w}
+              height={pics.ordination.h}
               sizes="(min-width: 768px) 45vw, 100vw"
               className="h-full max-h-[34rem] w-full object-cover object-top"
             />

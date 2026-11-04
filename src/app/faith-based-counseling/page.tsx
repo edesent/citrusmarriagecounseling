@@ -7,6 +7,7 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import { faq } from "@/lib/faqs";
+import { pics } from "@/lib/images";
 import { serviceNode } from "@/lib/schema";
 import { otherHelp, pastor } from "@/lib/site";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   title: { absolute: "Faith-Based Christian Counseling in Citrus County, FL" },
   description,
   alternates: { canonical: path },
-  openGraph: { title: "Faith-Based Counseling in Citrus County, FL", description, url: path },
+  openGraph: { title: "Faith-Based Christian Counseling in Citrus County, FL", description, url: path, images: [{ url: pics.motherDaughter.src, width: pics.motherDaughter.w, height: pics.motherDaughter.h, alt: pics.motherDaughter.alt }] },
 };
 
 export default function FaithBased() {
@@ -34,13 +35,7 @@ export default function FaithBased() {
             faith. The first consultation is free.
           </p>
         }
-        photo={{
-          src: "/photos/ordination.jpg",
-          alt: "Pastors laying hands on Brandon Bankert at his ordination at Bethel Baptist Church, December 2025",
-          w: 1188,
-          h: 1280,
-          position: "center 30%",
-        }}
+        photo={pics.motherDaughter}
       />
 
       <section className="bg-paper">
@@ -101,7 +96,7 @@ export default function FaithBased() {
 
       <AreaLinks service="Faith-based counseling" />
       <CtaBand heading="You don’t have to carry it alone." />
-      <JsonLd data={serviceNode("Faith-based counseling", path, description, "Christian counseling")} />
+      <JsonLd data={serviceNode("Faith-based counseling", path, description, "Christian counseling", pics.motherDaughter)} />
     </>
   );
 }

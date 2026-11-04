@@ -1,7 +1,9 @@
 import type { MetadataRoute } from "next";
 import { areas } from "@/lib/areas";
+import { areaPic, pagePics } from "@/lib/images";
 import { siteUrl } from "@/lib/site";
 
+/** Every page, with the pictures on it (an image sitemap, so they can show in image search). */
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages: [string, number][] = [
     ["", 1],
@@ -13,5 +15,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/areas", 0.7],
     ...areas.map((a): [string, number] => [`/areas/${a.slug}`, 0.7]),
   ];
-  return pages.map(([p, priority]) => ({ url: `${siteUrl}${p}`, changeFrequency: "monthly", priority }));
+  const picsFor = (p: string) => {
+    const area = areas.findIndex((a) => `/areas/${a.slug}` === p);
+    const list = area >= 0 ? [areaPic(area)] : (pagePics[p] ?? []);
+    return list.map((pic) => `${siteUrl}${pic.src}`);
+  };
+  return pages.map(([p, priority]) => ({
+    url: `${siteUrl}${p}`,
+    changeFrequency: "monthly",
+    priority,
+    images: picsFor(p),
+  }));
 }

@@ -9,6 +9,7 @@ import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import { areaBySlug, areas } from "@/lib/areas";
 import { faq } from "@/lib/faqs";
+import { areaPic } from "@/lib/images";
 import { ids } from "@/lib/schema";
 import { money, place, pricing, siteUrl } from "@/lib/site";
 
@@ -30,7 +31,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: `Christian Marriage & Faith-Based Counseling in ${a.name}, FL` },
     description,
     alternates: { canonical: path },
-    openGraph: { title: `Christian marriage counseling in ${a.name}, FL`, description, url: path },
+    openGraph: {
+      title: `Christian marriage counseling in ${a.name}, FL`,
+      description,
+      url: path,
+      images: [{ url: areaPic(areas.indexOf(a)).src, width: areaPic(areas.indexOf(a)).w, height: areaPic(areas.indexOf(a)).h, alt: areaPic(areas.indexOf(a)).alt }],
+    },
   };
 }
 
@@ -58,6 +64,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           { name: a.name, path },
         ]}
         eyebrow={`${a.name}, Florida`}
+        photo={areaPic(areas.indexOf(a))}
         title={<>Christian marriage counseling in {a.name}, FL</>}
         lede={
           <p>

@@ -7,7 +7,7 @@ export default function ConsultCard() {
   return (
     <aside className="self-start rounded-[1.75rem] bg-cream p-6 ring-1 ring-ink/8 lg:sticky lg:top-28">
       <div className="flex items-center gap-4">
-        <Image src="/photos/pastor-face.jpg" alt="Pastor Brandon Bankert" width={480} height={480} className="h-16 w-16 rounded-full object-cover ring-2 ring-accent" />
+        <Image src="/photos/pastor-brandon-bankert-headshot.jpg" alt="Pastor Brandon Bankert" width={480} height={480} className="h-16 w-16 rounded-full object-cover ring-2 ring-accent" />
         <div>
           <p className="display-soft text-xl">Pastor Brandon Bankert</p>
           <p className="text-sm text-muted">Bethel Baptist Church, Hernando</p>

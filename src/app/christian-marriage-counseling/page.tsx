@@ -7,6 +7,7 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import { faq } from "@/lib/faqs";
+import { pics } from "@/lib/images";
 import { serviceNode } from "@/lib/schema";
 import { otherHelp, pastor } from "@/lib/site";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   title: { absolute: "Biblical Marriage Counseling in Hernando, FL | Christian Couples" },
   description,
   alternates: { canonical: path },
-  openGraph: { title: "Biblical Marriage Counseling in Hernando, FL", description, url: path },
+  openGraph: { title: "Biblical Marriage Counseling in Hernando, FL", description, url: path, images: [{ url: pics.marriageCouple.src, width: pics.marriageCouple.w, height: pics.marriageCouple.h, alt: pics.marriageCouple.alt }] },
 };
 
 export default function MarriageCounseling() {
@@ -34,12 +35,7 @@ export default function MarriageCounseling() {
             free.
           </p>
         }
-        photo={{
-          src: "/photos/pastor-preaching.jpg",
-          alt: "Pastor Brandon Bankert preaching at Bethel Baptist Church in Hernando",
-          w: 1280,
-          h: 720,
-        }}
+        photo={pics.marriageCouple}
       />
 
       <section className="bg-paper">
@@ -120,7 +116,7 @@ export default function MarriageCounseling() {
 
       <AreaLinks service="Christian marriage counseling" />
       <CtaBand heading="Your marriage is worth one conversation." />
-      <JsonLd data={serviceNode("Christian marriage counseling", path, description, "Christian marriage counseling")} />
+      <JsonLd data={serviceNode("Christian marriage counseling", path, description, "Christian marriage counseling", pics.marriageCouple)} />
     </>
   );
 }

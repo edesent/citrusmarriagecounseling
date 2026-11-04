@@ -1,4 +1,5 @@
 import { areas } from "./areas";
+import type { Pic } from "./images";
 import { church, money, phone, place, pastor, practice, pricing, siteUrl } from "./site";
 
 /**
@@ -40,7 +41,7 @@ export function siteGraph() {
         alternateName: `${practice.tagline}`,
         description: `Christian marriage counseling, premarital counseling and faith-based counseling for couples and families across ${practice.county}, ${practice.state}, with ${pastor.styled} of ${church.name} in Hernando.`,
         url: siteUrl,
-        image: `${siteUrl}/photos/pastor-brandon-bankert.jpg`,
+        image: `${siteUrl}/photos/pastor-brandon-bankert-christian-counselor-hernando-fl.jpg`,
         logo: `${siteUrl}/icon.svg`,
         telephone: phone.tel,
         address,
@@ -79,7 +80,7 @@ export function siteGraph() {
         name: pastor.name,
         honorificPrefix: "Pastor",
         jobTitle: "Pastor and Christian counselor",
-        image: `${siteUrl}/photos/pastor-brandon-bankert.jpg`,
+        image: `${siteUrl}/photos/pastor-brandon-bankert-christian-counselor-hernando-fl.jpg`,
         url: `${siteUrl}/pastor-brandon-bankert`,
         worksFor: [{ "@id": ids.church }, { "@id": ids.practice }],
         alumniOf: { "@type": "CollegeOrUniversity", name: pastor.college },
@@ -105,7 +106,7 @@ export function siteGraph() {
   };
 }
 
-export function serviceNode(name: string, path: string, description: string, serviceType: string) {
+export function serviceNode(name: string, path: string, description: string, serviceType: string, image?: Pic) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -115,6 +116,7 @@ export function serviceNode(name: string, path: string, description: string, ser
     url: `${siteUrl}${path}`,
     provider: { "@id": ids.practice },
     areaServed,
+    ...(image && { image: { "@type": "ImageObject", url: `${siteUrl}${image.src}`, width: image.w, height: image.h, caption: image.alt } }),
   };
 }
 

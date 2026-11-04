@@ -8,6 +8,7 @@ import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import { faq } from "@/lib/faqs";
+import { pics } from "@/lib/images";
 import { serviceNode } from "@/lib/schema";
 import { money, pastor, pricing } from "@/lib/site";
 
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   title: { absolute: "Christian Premarital Counseling in Citrus County, FL – $62.50/Session" },
   description,
   alternates: { canonical: path },
-  openGraph: { title: "Premarital Counseling in Citrus County, FL", description, url: path },
+  openGraph: { title: "Christian Premarital Counseling in Citrus County, FL", description, url: path, images: [{ url: pics.engagedCouple.src, width: pics.engagedCouple.w, height: pics.engagedCouple.h, alt: pics.engagedCouple.alt }] },
 };
 
 const topics = [
@@ -38,6 +39,7 @@ export default function Premarital() {
       <PageHero
         trail={[{ name: "Premarital counseling", path }]}
         eyebrow="Premarital counseling"
+        photo={pics.engagedCouple}
         title="Christian premarital counseling in Citrus County, FL"
         lede={
           <p>
@@ -130,7 +132,7 @@ export default function Premarital() {
 
       <AreaLinks service="Premarital counseling" />
       <CtaBand heading="Build the foundation before the wedding." />
-      <JsonLd data={serviceNode("Premarital counseling", path, description, "Premarital counseling")} />
+      <JsonLd data={serviceNode("Premarital counseling", path, description, "Premarital counseling", pics.engagedCouple)} />
     </>
   );
 }

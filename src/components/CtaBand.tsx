@@ -9,7 +9,7 @@ export default function CtaBand({ heading = "Start with a free conversation.", c
       <div className="wrap py-16 md:py-20">
         <div className="grid items-center gap-8 rounded-[2rem] bg-night-deep p-7 text-white shadow-[0_40px_80px_-50px_rgba(7,8,7,0.9)] md:grid-cols-[auto_1fr_auto] md:p-10">
           <Image
-            src="/photos/pastor-face.jpg"
+            src="/photos/pastor-brandon-bankert-headshot.jpg"
             alt="Pastor Brandon Bankert"
             width={480}
             height={480}

@@ -6,6 +6,7 @@ import CountyMap from "@/components/CountyMap";
 import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import { allPlaces } from "@/lib/areas";
+import { pics } from "@/lib/images";
 import { faq } from "@/lib/faqs";
 import { church, money, pastor, phone, place, pricing, siteUrl } from "@/lib/site";
 
@@ -62,7 +63,7 @@ const glance: [string, React.ReactNode][] = [
         Book a free consultation
       </Link>{" "}
       or call{" "}
-      <a href={`tel:${phone.tel}`} className="link num">
+      <a href={`tel:${phone.tel}`} className="link num whitespace-nowrap">
         {phone.display}
       </a>
       .
@@ -107,10 +108,10 @@ export default function Home() {
             <div className="relative overflow-hidden rounded-t-[2.5rem] ring-1 ring-white/10">
               {/* The family photo cropped tall: 63% across keeps the children, his wife and him in frame. */}
               <Image
-                src="/photos/pastor-brandon-family.jpg"
-                alt="Pastor Brandon Bankert with his wife and children in front of the cross at Bethel Baptist Church, Hernando"
-                width={1800}
-                height={1350}
+                src={pics.pastorFamily.src}
+                alt={pics.pastorFamily.alt}
+                width={pics.pastorFamily.w}
+                height={pics.pastorFamily.h}
                 priority
                 sizes="(min-width: 1024px) 38vw, (min-width: 640px) 28rem, 100vw"
                 className="aspect-[5/6] w-full object-cover"
@@ -149,13 +150,18 @@ export default function Home() {
       {/* What people bring */}
       <section className="bg-paper">
         <div className="wrap py-16 md:py-24">
-          <div className="max-w-3xl">
-            <p className="eyebrow text-accent-deep">What couples bring to him</p>
-            <h2 className="display mt-3 text-4xl md:text-5xl">You are not the first to say it out loud.</h2>
-            <p className="mt-4 text-lg text-ink/75">
-              Most couples wait years before they ask for help. Here is what couples say when they finally do, and what Christian marriage
-              counseling with Pastor Brandon works on.
-            </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_1fr]">
+            <div>
+              <p className="eyebrow text-accent-deep">What couples bring to him</p>
+              <h2 className="display mt-3 text-4xl md:text-5xl">You are not the first to say it out loud.</h2>
+              <p className="mt-4 text-lg text-ink/75">
+                Most couples wait years before they ask for help. Here is what couples say when they finally do, and what Christian marriage
+                counseling with Pastor Brandon works on.
+              </p>
+            </div>
+            <figure className="overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-50px_rgba(7,8,7,0.8)]">
+              <Image src={pics.marriageCouple.src} alt={pics.marriageCouple.alt} width={pics.marriageCouple.w} height={pics.marriageCouple.h} sizes="(min-width: 1024px) 40vw, 100vw" className="h-auto w-full" />
+            </figure>
           </div>
           <ul className="mt-12 grid gap-x-12 gap-y-9 md:grid-cols-2">
             {struggles.map((s) => (
@@ -178,15 +184,22 @@ export default function Home() {
         <div className="wrap py-16 md:py-24">
           <p className="eyebrow text-accent-deep">How it works</p>
           <h2 className="display mt-3 max-w-3xl text-4xl md:text-5xl">Three steps, and the first one is free.</h2>
-          <ol className="mt-12 grid gap-10 md:grid-cols-3">
-            {steps.map((s) => (
-              <li key={s.n}>
-                <span className="display block text-7xl text-accent">{s.n}</span>
-                <h3 className="display-soft mt-2 text-2xl">{s.h}</h3>
-                <p className="mt-2 text-ink/75">{s.p}</p>
-              </li>
-            ))}
-          </ol>
+          <div className="mt-12 grid items-start gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+            <figure className="overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-50px_rgba(7,8,7,0.8)]">
+              <Image src={pics.praying.src} alt={pics.praying.alt} width={pics.praying.w} height={pics.praying.h} sizes="(min-width: 1024px) 40vw, 100vw" className="h-auto w-full" />
+            </figure>
+            <ol className="space-y-8">
+              {steps.map((s) => (
+                <li key={s.n} className="flex gap-5">
+                  <span className="display w-12 shrink-0 text-6xl leading-none text-accent">{s.n}</span>
+                  <span>
+                    <h3 className="display-soft text-2xl">{s.h}</h3>
+                    <p className="mt-1.5 text-ink/75">{s.p}</p>
+                  </span>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -195,10 +208,10 @@ export default function Home() {
         <div className="wrap grid items-center gap-12 py-16 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
           <figure className="overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-50px_rgba(7,8,7,0.8)]">
             <Image
-              src="/photos/open-bible.jpg"
-              alt="An open King James Bible with a pen resting on the page"
-              width={1600}
-              height={1200}
+              src={pics.engagedCouple.src}
+              alt={pics.engagedCouple.alt}
+              width={pics.engagedCouple.w}
+              height={pics.engagedCouple.h}
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="h-auto w-full"
             />
@@ -248,10 +261,10 @@ export default function Home() {
           </div>
           <figure className="overflow-hidden rounded-[2rem] ring-1 ring-white/10">
             <Image
-              src="/photos/pastor-preaching.jpg"
-              alt="Pastor Brandon Bankert preaching at Bethel Baptist Church in Hernando"
-              width={1280}
-              height={720}
+              src={pics.pastorPreaching.src}
+              alt={pics.pastorPreaching.alt}
+              width={pics.pastorPreaching.w}
+              height={pics.pastorPreaching.h}
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="h-auto w-full"
             />
@@ -261,10 +274,14 @@ export default function Home() {
 
       {/* Faith-based counseling */}
       <section className="bg-paper">
-        <div className="wrap grid gap-8 py-16 md:grid-cols-[1fr_1.2fr] md:py-20">
-          <h2 className="display text-4xl md:text-5xl">Not married, or coming on your own?</h2>
+        <div className="wrap grid items-center gap-10 py-16 md:py-20 lg:grid-cols-[1fr_1fr]">
+          <figure className="overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-50px_rgba(7,8,7,0.8)]">
+            <Image src={pics.motherDaughter.src} alt={pics.motherDaughter.alt} width={pics.motherDaughter.w} height={pics.motherDaughter.h} sizes="(min-width: 1024px) 45vw, 100vw" className="h-auto w-full" />
+          </figure>
           <div className="text-lg text-ink/80">
-            <p>
+            <p className="eyebrow text-accent-deep">Faith-based counseling</p>
+            <h2 className="display mt-3 text-4xl text-ink md:text-5xl">Not married, or coming on your own?</h2>
+            <p className="mt-5">
               Pastor Brandon also offers faith-based counseling for individuals and families: grief, a hard decision, a strained relationship with a
               grown child, or questions about God that won’t go away. It is the same free first conversation, the same Bible, and the same plain talk.
             </p>

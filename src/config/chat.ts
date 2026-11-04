@@ -14,7 +14,7 @@ export const CHAT = {
   accentColor: "#5f8f22",
   brandColor: "#0f100f",
   /** Pastor Brandon's face, so visitors see they are writing to a person. */
-  agentIcon: "/photos/pastor-face.jpg",
+  agentIcon: "/photos/pastor-brandon-bankert-headshot.jpg",
   greeting: "Thinking about counseling? I’m Pastor Brandon. Ask me anything here and I’ll answer you myself.",
   formSubtitle: "Leave your name and a number or email and Pastor Brandon will get back to you.",
 } as const;
