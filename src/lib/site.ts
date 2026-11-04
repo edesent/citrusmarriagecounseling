@@ -70,11 +70,14 @@ export const otherHelp = [
   { name: "Emergency", detail: "Call 911 if anyone is in danger right now." },
   { name: "988 Suicide & Crisis Lifeline", detail: "Call or text 988, any hour." },
   { name: "CASA (Citrus County Abuse Shelter Association)", detail: "24-hour domestic violence hotline, 352-344-8111." },
+  { name: "SAMHSA National Helpline", detail: "Free, confidential treatment referral for addiction, any hour: 1-800-662-4357." },
 ];
 
 export const nav = [
   { href: "/christian-marriage-counseling", label: "Marriage" },
   { href: "/premarital-counseling", label: "Premarital" },
+  { href: "/christian-addiction-counseling", label: "Addiction" },
+  { href: "/christian-counseling-for-depression", label: "Depression" },
   { href: "/faith-based-counseling", label: "Faith-based" },
   { href: "/pastor-brandon-bankert", label: "Pastor Brandon" },
   { href: "/areas", label: "Areas" },

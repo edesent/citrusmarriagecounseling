@@ -22,6 +22,11 @@ const struggles = [
   { said: "We’re living like roommates.", about: "Distance and dryness: finding your way back to friendship, tenderness and intimacy." },
   { said: "His family, her family, our kids.", about: "In-laws, stepchildren, adult children and grandchildren: whose voice comes first, and how to say so kindly." },
   { said: "Retirement changed everything.", about: "A new season: sharing a house all day, a health crisis, caring for a parent, or a second marriage later in life." },
+  {
+    said: "One of us is drinking again.",
+    about: "Addiction in the home: alcohol, pills, pornography or gambling, and the trust it breaks. Help for the one who is struggling and the one beside them.",
+  },
+  { said: "I can’t get out of bed.", about: "Depression and anxiety that have settled over a marriage or a home, met with hope from Scripture, alongside your doctor." },
   { said: "One of us is far from God.", about: "Faith differences: loving a spouse who doesn’t share your faith, or who has drifted from it." },
   { said: "We’re getting married.", about: "Premarital counseling: eight sessions to lay a foundation before the wedding." },
 ];
@@ -45,7 +50,10 @@ const steps = [
 ];
 
 const glance: [string, React.ReactNode][] = [
-  ["What it is", "Christian, Bible-based marriage counseling, premarital counseling and faith-based counseling. A ministry of Bethel Baptist Church; not licensed therapy."],
+  [
+    "What it is",
+    "Christian, Bible-based marriage counseling, premarital counseling, addiction counseling, counseling for depression and anxiety, and faith-based counseling. A ministry of Bethel Baptist Church; not licensed therapy.",
+  ],
   [
     "Counselor",
     `${pastor.styled}, pastor of ${church.name}. ${pastor.college} graduate (${pastor.collegeYear}), married since ${pastor.marriedSince}, father of three.`,
@@ -284,8 +292,15 @@ export default function Home() {
             <p className="eyebrow text-accent-deep">Faith-based counseling</p>
             <h2 className="display mt-3 text-4xl text-ink md:text-5xl">Not married, or coming on your own?</h2>
             <p className="mt-5">
-              Pastor Brandon also offers faith-based counseling for individuals and families: grief, a hard decision, a strained relationship with a
-              grown child, or questions about God that won’t go away. It is the same free first conversation, the same Bible, and the same plain talk.
+              Pastor Brandon also offers faith-based counseling for individuals and families:{" "}
+              <Link href="/christian-addiction-counseling" className="link">
+                addiction
+              </Link>
+              ,{" "}
+              <Link href="/christian-counseling-for-depression" className="link">
+                depression and anxiety
+              </Link>
+              , grief, a hard decision, a strained relationship with a grown child, or questions about God that won’t go away. It is the same free first conversation, the same Bible, and the same plain talk.
             </p>
             <Link href="/faith-based-counseling" className="btn btn-line mt-6 text-night">
               Faith-based counseling

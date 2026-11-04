@@ -6,6 +6,8 @@ import Braid, { Mark } from "./Braid";
 const services = [
   { href: "/christian-marriage-counseling", label: "Christian marriage counseling" },
   { href: "/premarital-counseling", label: "Premarital counseling" },
+  { href: "/christian-addiction-counseling", label: "Addiction counseling" },
+  { href: "/christian-counseling-for-depression", label: "Depression & anxiety" },
   { href: "/faith-based-counseling", label: "Faith-based counseling" },
   { href: "/pastor-brandon-bankert", label: "About Pastor Brandon" },
   { href: "/free-consultation", label: "Free consultation" },

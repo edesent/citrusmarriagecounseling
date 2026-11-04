@@ -38,24 +38,24 @@ export default function Header() {
           <Link href="/" aria-label="Citrus Marriage Counseling, home">
             <Wordmark dark />
           </Link>
-          <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
+          <nav className="hidden items-center gap-1 xl:flex" aria-label="Main">
             {nav.map((n) => (
               <Link
                 key={n.href}
                 href={n.href}
-                className={`rounded-full px-3 py-2 text-[0.95rem] font-semibold transition hover:bg-white/10 ${path.startsWith(n.href) ? "text-accent-light" : "text-white"}`}
+                className={`whitespace-nowrap rounded-full px-2.5 py-2 text-[0.92rem] font-semibold transition hover:bg-white/10 ${path.startsWith(n.href) ? "text-accent-light" : "text-white"}`}
               >
                 {n.label}
               </Link>
             ))}
-            <Link href="/free-consultation" className="btn btn-lime ml-3 px-5 py-3 text-sm">
+            <Link href="/free-consultation" className="btn btn-lime ml-2 whitespace-nowrap px-5 py-3 text-sm">
               Free consultation
             </Link>
           </nav>
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border-2 border-white/60 px-3 py-2 text-sm font-bold text-white min-[375px]:px-4 lg:hidden"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border-2 border-white/60 px-3 py-2 text-sm font-bold text-white min-[375px]:px-4 xl:hidden"
             aria-expanded={open}
             aria-controls="phone-menu"
           >
@@ -70,7 +70,7 @@ export default function Header() {
       {/* A sibling of the header, not a child: a fixed layer inside a sticky bar gets trapped on some phones. */}
       <div
         id="phone-menu"
-        className={`fixed inset-0 z-50 flex flex-col bg-night-deep text-white transition-opacity duration-200 lg:hidden ${open ? "opacity-100" : "pointer-events-none opacity-0"}`}
+        className={`fixed inset-0 z-50 flex flex-col bg-night-deep text-white transition-opacity duration-200 xl:hidden ${open ? "opacity-100" : "pointer-events-none opacity-0"}`}
         aria-hidden={!open}
       >
         <div className="wrap flex h-[4.5rem] items-center justify-between">
@@ -82,9 +82,9 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        <nav className="wrap flex flex-1 flex-col justify-center gap-0.5 pb-10" aria-label="Main">
+        <nav className="wrap flex flex-1 flex-col justify-start gap-0.5 overflow-y-auto py-6 [@media(min-height:720px)]:justify-center" aria-label="Main">
           {[{ href: "/", label: "Home" }, ...nav].map((n) => (
-            <Link key={n.href} href={n.href} className="display border-b border-white/12 py-3.5 text-[2.1rem]" tabIndex={open ? 0 : -1}>
+            <Link key={n.href} href={n.href} className="display border-b border-white/12 py-2.5 text-[1.75rem] min-[400px]:py-3 min-[400px]:text-[2rem]" tabIndex={open ? 0 : -1}>
               {n.label}
             </Link>
           ))}

@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["", 1],
     ["/christian-marriage-counseling", 0.9],
     ["/premarital-counseling", 0.9],
+    ["/christian-addiction-counseling", 0.8],
+    ["/christian-counseling-for-depression", 0.8],
     ["/faith-based-counseling", 0.8],
     ["/pastor-brandon-bankert", 0.7],
     ["/free-consultation", 0.7],

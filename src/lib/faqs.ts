@@ -49,4 +49,20 @@ export const faq = {
     q: "How long is a session, and how many will we need?",
     a: "Sessions are about an hour. Premarital counseling is eight sessions. For marriage counseling, Pastor Brandon will suggest a number of sessions at the consultation, based on what you are facing.",
   },
+  addictionKinds: {
+    q: "What kinds of addiction do you help with?",
+    a: "Alcohol, drugs, pornography, gambling, and other habits that have taken hold. Pastor Brandon also counsels husbands, wives and parents of someone who is struggling.",
+  },
+  addictionMedical: {
+    q: "Is this instead of detox, rehab or a doctor?",
+    a: "No. Stopping alcohol or some drugs suddenly can be dangerous, so anyone who is physically dependent needs a doctor first. Christian counseling works alongside medical care and recovery programs, not instead of them. The SAMHSA National Helpline, 1-800-662-4357, is free and open any hour.",
+  },
+  depressionMedical: {
+    q: "Is this instead of seeing a doctor?",
+    a: "No. Keep seeing your doctor and keep any treatment they have given you. Christian counseling works alongside medical care: a pastor to talk with, pray with, and help you take the next right step.",
+  },
+  depressionCrisis: {
+    q: "What if I am thinking about ending my life?",
+    a: "Please reach out right now: call or text 988, the Suicide & Crisis Lifeline, any hour, or call 911. Then, when you are safe, Pastor Brandon would be glad to talk with you.",
+  },
 } satisfies Record<string, QA>;

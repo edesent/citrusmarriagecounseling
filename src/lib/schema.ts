@@ -52,7 +52,14 @@ export function siteGraph() {
         parentOrganization: { "@id": ids.church },
         sameAs: [church.url],
         priceRange: `Free consultation; ${money(pricing.premaritalSession)} per premarital session`,
-        knowsAbout: ["Christian marriage counseling", "Premarital counseling", "Faith-based counseling", "Biblical counseling"],
+        knowsAbout: [
+          "Christian marriage counseling",
+          "Premarital counseling",
+          "Christian addiction counseling",
+          "Christian counseling for depression and anxiety",
+          "Faith-based counseling",
+          "Biblical counseling",
+        ],
         makesOffer: [
           {
             "@type": "Offer",

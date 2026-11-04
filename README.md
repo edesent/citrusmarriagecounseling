@@ -29,6 +29,11 @@ Next.js 16 (App Router), Tailwind 4, self-hosted fonts (Newsreader + Figtree), d
 - **Florida premarital course:** the site says couples who finish a *registered* course get the license discount and
   skip the three-day wait, and to "ask about the course certificate". Only say Pastor Brandon's course qualifies once he
   has filed the provider affidavit with the Citrus County Clerk (s. 741.0305(5)).
+- **Addiction and depression** (`/christian-addiction-counseling`, `/christian-counseling-for-depression`): always
+  "alongside a doctor / treatment program, not instead of it", with 911, 988 and (for addiction) the SAMHSA helpline
+  on the page. Never promise to treat or cure, never tell anyone to stop a medication, never call it therapy.
+- **Pictures:** no Bible (or other books) in the counseling illustrations (Eli's call). Props stay to mugs, flowers,
+  a workbook.
 - **Policies he discusses in person** (for example whom he will counsel alone) stay off the site.
 - **Area pages** must each carry facts about that place (drive, roads, local notes). Pages that only swap the town name
   are treated as spam by search engines.

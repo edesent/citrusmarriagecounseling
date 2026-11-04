@@ -53,8 +53,13 @@ export default function FaithBased() {
               <li>Family conflict: a grown child who has gone their own way, a falling-out between siblings, a strained relationship with a parent</li>
               <li>Parenting: discipline, a teenager in trouble, raising children in the faith</li>
               <li>Guilt, shame and forgiveness, giving it and receiving it</li>
-              <li>Worry, discouragement and fear, alongside your doctor when one is needed</li>
-              <li>Habits and addictions you want to be free of, alongside a recovery program or doctor when one is needed</li>
+              <li>
+                Depression, worry and fear, alongside your doctor when one is needed (<Link href="/christian-counseling-for-depression">counseling for depression and anxiety</Link>)
+              </li>
+              <li>
+                Habits and addictions you want to be free of, alongside a recovery program or doctor when one is needed (
+                <Link href="/christian-addiction-counseling">Christian addiction counseling</Link>)
+              </li>
               <li>A big decision: a move, a job, caring for an aging parent</li>
               <li>Questions about God, the Bible and salvation that won’t go away</li>
             </ul>

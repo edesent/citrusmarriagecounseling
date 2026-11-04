@@ -14,6 +14,8 @@ export function GET() {
   const pages = [
     ["Christian marriage counseling", "/christian-marriage-counseling", "Biblical marriage counseling for couples: communication, trust, money, family, new seasons."],
     ["Premarital counseling", "/premarital-counseling", `Christian premarital counseling, ${money(pricing.premaritalSession)} a session.`],
+    ["Christian addiction counseling", "/christian-addiction-counseling", "Alcohol, drugs, pornography, gambling; help for families too; alongside medical care."],
+    ["Christian counseling for depression and anxiety", "/christian-counseling-for-depression", "Hope from Scripture alongside your doctor."],
     ["Faith-based counseling", "/faith-based-counseling", "Christian counseling for individuals and families: grief, family conflict, hard decisions, questions of faith."],
     [pastor.styled, "/pastor-brandon-bankert", "About the counselor."],
     ["Free consultation", "/free-consultation", "Request a free first consultation."],
@@ -21,7 +23,7 @@ export function GET() {
   ];
   const text = `# Citrus Marriage Counseling
 
-> Christian marriage counseling, premarital counseling and faith-based counseling in Citrus County, Florida, with ${pastor.styled} of ${church.name} in Hernando. The first consultation is free.
+> Christian marriage counseling, premarital counseling, addiction counseling, counseling for depression and anxiety, and faith-based counseling in Citrus County, Florida, with ${pastor.styled} of ${church.name} in Hernando. The first consultation is free.
 
 ## Key facts
 

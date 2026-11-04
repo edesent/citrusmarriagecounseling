@@ -7,7 +7,14 @@ const field =
   "mt-1 w-full rounded-xl border border-ink/15 bg-white px-3.5 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/25";
 const label = "block text-sm font-semibold text-ink/80";
 
-export const topics = ["Marriage counseling", "Premarital counseling", "Faith-based counseling for me", "Not sure yet"] as const;
+export const topics = [
+  "Marriage counseling",
+  "Premarital counseling",
+  "Addiction recovery",
+  "Depression or anxiety",
+  "Faith-based counseling for me",
+  "Not sure yet",
+] as const;
 
 /** The free-consultation request. Lands in Pastor Brandon's Slack through /api/form. */
 export default function ConsultForm({ topic = "Marriage counseling" }: { topic?: (typeof topics)[number] }) {

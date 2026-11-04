@@ -19,9 +19,13 @@ export default function ConsultPopup() {
 
   const topic: (typeof topics)[number] = path.startsWith("/premarital")
     ? "Premarital counseling"
-    : path.startsWith("/faith-based")
-      ? "Faith-based counseling for me"
-      : "Marriage counseling";
+    : path.startsWith("/christian-addiction")
+      ? "Addiction recovery"
+      : path.startsWith("/christian-counseling-for-depression")
+        ? "Depression or anxiety"
+        : path.startsWith("/faith-based")
+          ? "Faith-based counseling for me"
+          : "Marriage counseling";
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {

@@ -98,6 +98,13 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
               relationship with a grown child, a hard decision, or questions of faith. <Link href="/faith-based-counseling">Faith-based counseling</Link>.
             </p>
 
+            <h2>Addiction and depression counseling in {a.name}</h2>
+            <p>
+              Pastor Brandon also counsels people from {a.name} through addiction (alcohol, drugs, pornography, gambling) and through depression and
+              anxiety, always alongside a doctor when one is needed. <Link href="/christian-addiction-counseling">Christian addiction counseling</Link>{" "}
+              · <Link href="/christian-counseling-for-depression">Christian counseling for depression</Link>.
+            </p>
+
             <h2>Premarital counseling for {a.name} couples</h2>
             <p>
               Getting married? Premarital counseling with Pastor Brandon is <span className="num">{money(pricing.premaritalSession)}</span> a

@@ -78,6 +78,18 @@ export const pics = {
     h: 1024,
     alt: "A husband and wife praying together, hands joined on the kitchen table",
   },
+  recovery: {
+    src: "/photos/christian-addiction-counseling-recovery-florida.webp",
+    w: 1536,
+    h: 1024,
+    alt: "A man on a dock over a Florida spring at sunrise, an older friend's hand on his shoulder, in addiction recovery",
+  },
+  hope: {
+    src: "/photos/christian-counseling-depression-anxiety-florida.webp",
+    w: 1536,
+    h: 1024,
+    alt: "A woman by a sunlit window holding a warm mug while a friend sits beside her and listens, after a season of depression",
+  },
 } satisfies Record<string, Pic>;
 
 /** The hero picture for each area page, so the eleven pages don't all show the same one. */
@@ -90,6 +102,8 @@ export const pagePics: Record<string, Pic[]> = {
   "/christian-marriage-counseling": [pics.marriageCouple],
   "/premarital-counseling": [pics.engagedCouple],
   "/faith-based-counseling": [pics.motherDaughter],
+  "/christian-addiction-counseling": [pics.recovery],
+  "/christian-counseling-for-depression": [pics.hope],
   "/pastor-brandon-bankert": [pics.pastorPortrait, pics.pastorFamily, pics.ordination],
   "/areas": [pics.olderCouple],
 };

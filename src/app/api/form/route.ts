@@ -64,7 +64,7 @@ const fake = () => NextResponse.json({ ok: true });
 type Body = Record<string, unknown>;
 type Built = { text: string; subject: string; name: string; contact: string } | { error: string } | { spam: true };
 
-const TOPICS = ["Marriage counseling", "Premarital counseling", "Faith-based counseling for me", "Not sure yet"];
+const TOPICS = ["Marriage counseling", "Premarital counseling", "Addiction recovery", "Depression or anxiety", "Faith-based counseling for me", "Not sure yet"];
 const TIMES = ["Mornings", "Afternoons", "Evenings", "Any time"];
 
 function consultationMessage(b: Body): Built {
