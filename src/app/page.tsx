@@ -83,16 +83,16 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-night text-white">
+      <section className="relative overflow-hidden bg-cream text-ink">
         <div className="wrap grid items-end gap-10 pt-10 md:pt-14 lg:grid-cols-[1.12fr_0.88fr] lg:gap-14">
           <div className="pb-10 lg:pb-20">
-            <p className="eyebrow text-accent-light">Hernando · Inverness · all of Citrus County</p>
+            <p className="eyebrow text-accent-deep">Hernando · Inverness · all of Citrus County</p>
             <h1 className="display mt-4 text-[2.75rem] sm:text-6xl lg:text-[4.6rem]">
               Christian marriage counseling in Citrus County, Florida
             </h1>
             {/* Bethel's gold script, one line: Ecclesiastes 4:12, the threefold cord. */}
-            <p className="script mt-3 text-[2rem] text-accent-light sm:text-[2.6rem]">A threefold cord is not quickly broken.</p>
-            <p className="mt-5 max-w-2xl text-lg text-white/85 md:text-xl">
+            <p className="script mt-3 text-[2rem] text-accent sm:text-[2.6rem]">A threefold cord is not quickly broken.</p>
+            <p className="mt-5 max-w-2xl text-lg text-ink/80 md:text-xl">
               Sit down with {pastor.styled} at Bethel Baptist Church in Hernando. Honest, Bible-based counsel for couples who are struggling, and for
               couples getting ready to marry. Your first consultation is free.
             </p>
@@ -100,22 +100,22 @@ export default function Home() {
               <Link href="/free-consultation" className="btn btn-lime text-base">
                 Book a free consultation
               </Link>
-              <a href={`tel:${phone.tel}`} className="btn btn-line text-white">
+              <a href={`tel:${phone.tel}`} className="btn btn-line text-night">
                 Call <span className="num">{phone.display}</span>
               </a>
             </div>
-            <p className="mt-6 text-white/70">
-              Premarital counseling <span className="num font-semibold text-white">{money(pricing.premaritalSession)}</span> a session
+            <p className="mt-6 text-ink/70">
+              Premarital counseling <span className="num font-semibold text-ink">{money(pricing.premaritalSession)}</span> a session
             </p>
-            <p className="mt-1 text-white/70">
-              <Link href="/faith-based-counseling" className="link text-white/90">
+            <p className="mt-1 text-ink/70">
+              <Link href="/faith-based-counseling" className="link text-ink/90">
                 Faith-based counseling
               </Link>{" "}
               for individuals and families too
             </p>
           </div>
           <figure className="relative mx-auto w-full max-w-md self-end lg:max-w-none">
-            <div className="relative overflow-hidden rounded-t-[2.5rem] ring-1 ring-white/10">
+            <div className="relative overflow-hidden rounded-t-[2.5rem] shadow-[0_40px_80px_-40px_rgba(7,8,7,0.6)] ring-1 ring-ink/8">
               {/* The family photo cropped tall: 63% across keeps the children, his wife and him in frame. */}
               <Image
                 src={pics.pastorFamily.src}
@@ -137,7 +137,7 @@ export default function Home() {
             </figcaption>
           </figure>
         </div>
-        <Braid id="braid-home-hero" gap="var(--night)" className="block" />
+        <Braid id="braid-home-hero" gap="var(--cream)" className="block" />
       </section>
 
       {/* At a glance: plain facts, written to be quoted by search engines and AI answers. */}

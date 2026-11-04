@@ -49,8 +49,8 @@ export default function Premarital() {
       >
         <div className="mt-8 flex flex-wrap items-end gap-x-8 gap-y-3">
           <p>
-            <span className="num block text-6xl font-extrabold tracking-tight text-accent-light">{money(pricing.premaritalSession)}</span>
-            <span className="text-white/75">a session</span>
+            <span className="num block text-6xl font-extrabold tracking-tight text-accent-deep">{money(pricing.premaritalSession)}</span>
+            <span className="text-muted">a session</span>
           </p>
         </div>
       </PageHero>

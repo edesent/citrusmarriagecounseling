@@ -75,7 +75,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           </p>
         }
       >
-        {a.alsoServes.length > 0 && <p className="mt-4 text-white/70">Also serving {a.alsoServes.join(" and ")}.</p>}
+        {a.alsoServes.length > 0 && <p className="mt-4 text-muted">Also serving {a.alsoServes.join(" and ")}.</p>}
       </PageHero>
 
       <section className="bg-paper">

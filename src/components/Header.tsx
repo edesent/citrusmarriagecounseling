@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { nav, phone } from "@/lib/site";
-import { Mark } from "./Braid";
+import Braid, { Mark } from "./Braid";
 
 function Wordmark({ dark = false }: { dark?: boolean }) {
   return (
@@ -32,18 +32,18 @@ export default function Header() {
 
   return (
     <>
-      {/* A black bar with white type, as on Bethel Baptist Church's site. */}
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-night-deep text-white shadow-[0_10px_30px_-20px_rgba(0,0,0,0.6)]">
+      {/* Cream bar with dark type; the threefold cord runs underneath it as a slim rule. */}
+      <header className="sticky top-0 z-40 bg-paper/97 shadow-[0_12px_30px_-26px_rgba(7,8,7,0.5)] backdrop-blur">
         <div className="wrap flex h-[4.5rem] items-center justify-between gap-2 sm:gap-4 md:h-20">
           <Link href="/" aria-label="Citrus Marriage Counseling, home">
-            <Wordmark dark />
+            <Wordmark />
           </Link>
           <nav className="hidden items-center gap-1 xl:flex" aria-label="Main">
             {nav.map((n) => (
               <Link
                 key={n.href}
                 href={n.href}
-                className={`whitespace-nowrap rounded-full px-2.5 py-2 text-[0.92rem] font-semibold transition hover:bg-white/10 ${path.startsWith(n.href) ? "text-accent-light" : "text-white"}`}
+                className={`whitespace-nowrap rounded-full px-2.5 py-2 text-[0.92rem] font-semibold transition hover:bg-night/6 ${path.startsWith(n.href) ? "text-accent-deep" : "text-ink"}`}
               >
                 {n.label}
               </Link>
@@ -55,7 +55,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border-2 border-white/60 px-3 py-2 text-sm font-bold text-white min-[375px]:px-4 xl:hidden"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border-2 border-night/70 px-3 py-2 text-sm font-bold text-night min-[375px]:px-4 xl:hidden"
             aria-expanded={open}
             aria-controls="phone-menu"
           >
@@ -65,6 +65,7 @@ export default function Header() {
             </svg>
           </button>
         </div>
+        <Braid id="braid-header" gap="var(--paper)" height={10} period={44} width={2.6} className="block" />
       </header>
 
       {/* A sibling of the header, not a child: a fixed layer inside a sticky bar gets trapped on some phones. */}
