@@ -14,11 +14,8 @@ function Wordmark({ dark = false }: { dark?: boolean }) {
         colors={dark ? ["var(--brass-light)", "var(--spring-pale)", "var(--brass)"] : undefined}
         className="h-[1.35rem] w-auto shrink-0 md:h-6"
       />
-      <span className="leading-none">
-        <span className={`display-soft block whitespace-nowrap text-[1.02rem] sm:text-[1.12rem] md:text-[1.3rem] ${dark ? "text-white" : "text-spring-deep"}`}>Citrus Marriage Counseling</span>
-        <span className={`mt-1 block whitespace-nowrap text-[0.58rem] font-semibold tracking-[0.12em] uppercase sm:text-[0.68rem] sm:tracking-[0.14em] md:text-[0.72rem] ${dark ? "text-brass-light" : "text-brass-deep"}`}>
-          with Pastor Brandon Bankert
-        </span>
+      <span className={`display-soft whitespace-nowrap text-[0.94rem] leading-none min-[390px]:text-[1.04rem] sm:text-[1.3rem] md:text-[1.45rem] ${dark ? "text-white" : "text-spring-deep"}`}>
+        Citrus Marriage Counseling
       </span>
     </span>
   );
@@ -36,7 +33,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-ink/8 bg-paper/97 shadow-[0_12px_30px_-26px_rgba(11,43,40,0.6)]">
-        <div className="wrap flex h-[4.5rem] items-center justify-between gap-4 md:h-20">
+        <div className="wrap flex h-[4.5rem] items-center justify-between gap-2 sm:gap-4 md:h-20">
           <Link href="/" aria-label="Citrus Marriage Counseling, home">
             <Wordmark />
           </Link>
@@ -57,7 +54,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex items-center gap-2 rounded-full border-2 border-spring/70 px-4 py-2 text-sm font-bold text-spring lg:hidden"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border-2 border-spring/70 px-3 py-2 text-sm font-bold text-spring min-[375px]:px-4 lg:hidden"
             aria-expanded={open}
             aria-controls="phone-menu"
           >

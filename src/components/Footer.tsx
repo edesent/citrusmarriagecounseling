@@ -94,7 +94,7 @@ export default function Footer() {
           </span>
           <span>
             <a href="https://www.elijahdesent.com/churches" className="hover:text-brass-light" rel="noopener">
-              Church website development
+              Website development
             </a>{" "}
             by Elijah Desent
           </span>
