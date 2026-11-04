@@ -15,10 +15,10 @@ const description =
   "Bible-based Christian marriage counseling in Citrus County, FL with Pastor Brandon Bankert in Hernando: communication, trust, money and family. Free consultation.";
 
 export const metadata: Metadata = {
-  title: { absolute: "How Christian Marriage Counseling Works | Sessions, Cost & Help in Citrus County, FL" },
+  title: { absolute: "Biblical Marriage Counseling in Hernando, FL | Christian Couples" },
   description,
   alternates: { canonical: path },
-  openGraph: { title: "Christian Marriage Counseling in Citrus County, FL", description, url: path },
+  openGraph: { title: "Biblical Marriage Counseling in Hernando, FL", description, url: path },
 };
 
 export default function MarriageCounseling() {
@@ -26,8 +26,8 @@ export default function MarriageCounseling() {
     <>
       <PageHero
         trail={[{ name: "Christian marriage counseling", path }]}
-        eyebrow="Christian marriage counseling"
-        title="Christian marriage counseling in Citrus County, FL"
+        eyebrow="Christian marriage counseling · Citrus County"
+        title="Biblical marriage counseling in Hernando, Florida"
         lede={
           <p>
             Counsel from the Bible for marriages that are hurting, stuck, or simply tired, with {pastor.styled} in Hernando. The first consultation is
@@ -55,7 +55,7 @@ export default function MarriageCounseling() {
               Hernando, Inverness, Beverly Hills, Crystal River and every other part of Citrus County.
             </p>
 
-            <h2>What he can help with</h2>
+            <h2>What Christian marriage counseling helps with</h2>
             <ul>
               <li>Conversations that keep turning into fights, the silent treatment, harsh words</li>
               <li>Trust after an affair, pornography, lies or a hidden debt</li>
@@ -67,7 +67,7 @@ export default function MarriageCounseling() {
               <li>Thinking about separating, and wanting to try once more first</li>
             </ul>
 
-            <h2>How the sessions work</h2>
+            <h2>How marriage counseling sessions work</h2>
             <p>
               It starts with a <Link href="/free-consultation">free consultation</Link>. You tell Pastor Brandon what is going on, and he tells you
               honestly whether and how he can help. If you go ahead, counseling is a set number of sessions of about an hour each at Bethel Baptist
@@ -79,7 +79,7 @@ export default function MarriageCounseling() {
               stop. Change happens at home, not in the office.
             </p>
 
-            <h2>What it is not</h2>
+            <h2>Christian counseling, not licensed therapy</h2>
             <p>
               This is Christian counseling from a pastor, under the oversight of Bethel Baptist Church. Pastor Brandon is not a licensed therapist,
               and he will say so when something needs a doctor or a licensed professional, such as an addiction, a mental illness, or thoughts of
@@ -94,7 +94,7 @@ export default function MarriageCounseling() {
               ))}
             </ul>
 
-            <h2>Why couples choose a pastor</h2>
+            <h2>Why couples choose a pastor for marriage counseling</h2>
             <ul>
               <li>Counsel grounded in Scripture, from someone who believes what it says about marriage.</li>
               <li>A local pastor you can meet face to face, not an app or a video call with a stranger.</li>
@@ -114,7 +114,7 @@ export default function MarriageCounseling() {
 
       <section className="bg-paper">
         <div className="wrap pb-16 md:pb-24">
-          <Faq items={[faq.therapy, faq.members, faq.cost, faq.sessions, faq.confidential, faq.abuse, faq.where]} />
+          <Faq title="Christian marriage counseling questions" items={[faq.therapy, faq.members, faq.cost, faq.sessions, faq.confidential, faq.abuse, faq.where]} />
         </div>
       </section>
 

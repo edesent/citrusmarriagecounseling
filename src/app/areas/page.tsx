@@ -10,7 +10,7 @@ const description =
   "Christian marriage and faith-based counseling for every Citrus County community: Inverness, Hernando, Crystal River, Beverly Hills, Lecanto, Homosassa and more.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Areas Served in Citrus County, FL | Christian Marriage Counseling" },
+  title: { absolute: "Christian Marriage Counseling Across Citrus County, FL | Areas Served" },
   description,
   alternates: { canonical: path },
   openGraph: { title: "Christian marriage counseling across Citrus County, FL", description, url: path },
@@ -22,7 +22,7 @@ export default function Areas() {
       <PageHero
         trail={[{ name: "Areas", path }]}
         eyebrow="Areas served"
-        title="Christian marriage counseling across Citrus County"
+        title="Christian marriage counseling near you in Citrus County"
         lede={
           <p>
             Pastor Brandon Bankert meets couples and families from every part of the county at Bethel Baptist Church in Hernando. Find your town for

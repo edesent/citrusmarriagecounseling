@@ -12,7 +12,7 @@ const description =
   "Pastor Brandon Bankert of Bethel Baptist Church, Hernando, FL: Bible college graduate, married since 2011, father of three. Christian counseling in Citrus County.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Pastor Brandon Bankert | Christian Counselor in Hernando, FL" },
+  title: { absolute: "Pastor Brandon Bankert – Christian Counselor in Hernando, FL" },
   description,
   alternates: { canonical: path },
   openGraph: { title: "Pastor Brandon Bankert, Christian counselor in Hernando, FL", description, url: path, type: "profile" },
@@ -38,7 +38,7 @@ export default function About() {
       <PageHero
         trail={[{ name: "Pastor Brandon Bankert", path }]}
         eyebrow="Your counselor"
-        title="Pastor Brandon Bankert"
+        title="Pastor Brandon Bankert, Christian counselor in Hernando"
         lede={
           <p>
             Pastor of {church.name} in Hernando, husband since {pastor.marriedSince}, father of three, and the counselor you will sit down with.

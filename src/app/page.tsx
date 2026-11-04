@@ -7,7 +7,7 @@ import CtaBand from "@/components/CtaBand";
 import Faq from "@/components/Faq";
 import { allPlaces } from "@/lib/areas";
 import { faq } from "@/lib/faqs";
-import { money, pastor, phone, pricing, siteUrl } from "@/lib/site";
+import { church, money, pastor, phone, place, pricing, siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: siteUrl },
@@ -41,6 +41,33 @@ const steps = [
     h: "Counsel from Scripture",
     p: "Each session brings the Bible to bear on your situation, practically, with things to work on at home between sessions.",
   },
+];
+
+const glance: [string, React.ReactNode][] = [
+  ["What it is", "Christian, Bible-based marriage counseling, premarital counseling and faith-based counseling. A ministry of Bethel Baptist Church; not licensed therapy."],
+  [
+    "Counselor",
+    `${pastor.styled}, pastor of ${church.name}. ${pastor.college} graduate (${pastor.collegeYear}), married since ${pastor.marriedSince}, father of three.`,
+  ],
+  ["Where", `${place.name}, ${place.street}, ${place.city}, ${place.stateCode} ${place.zip}, just off CR 486.`],
+  ["Who it serves", "Couples, engaged couples, individuals and families across Citrus County: Inverness, Hernando, Crystal River, Beverly Hills, Lecanto, Homosassa, Floral City and more."],
+  [
+    "Cost",
+    `The first consultation is free. Premarital counseling is ${money(pricing.premaritalSession)} a session. Marriage counseling costs are explained at the consultation.`,
+  ],
+  [
+    "How to start",
+    <>
+      <Link href="/free-consultation" className="link">
+        Book a free consultation
+      </Link>{" "}
+      or call{" "}
+      <a href={`tel:${phone.tel}`} className="link num">
+        {phone.display}
+      </a>
+      .
+    </>,
+  ],
 ];
 
 export default function Home() {
@@ -100,6 +127,23 @@ export default function Home() {
           </figure>
         </div>
         <Braid id="braid-home-hero" gap="var(--night)" className="block" />
+      </section>
+
+      {/* At a glance: plain facts, written to be quoted by search engines and AI answers. */}
+      <section className="border-b border-ink/8 bg-paper" aria-labelledby="glance">
+        <div className="wrap py-12 md:py-14">
+          <h2 id="glance" className="eyebrow text-accent-deep">
+            Citrus Marriage Counseling at a glance
+          </h2>
+          <dl className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+            {glance.map(([dt, dd]) => (
+              <div key={dt} className="border-l-2 border-lime pl-4">
+                <dt className="text-sm font-bold uppercase tracking-wider text-muted">{dt}</dt>
+                <dd className="mt-1 text-ink/85">{dd}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
 
       {/* What people bring */}
@@ -237,7 +281,7 @@ export default function Home() {
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
               <p className="eyebrow text-accent-deep">Where</p>
-              <h2 className="display mt-3 text-4xl md:text-5xl">Counseling for every part of Citrus County.</h2>
+              <h2 className="display mt-3 text-4xl md:text-5xl">Christian counseling for every part of Citrus County.</h2>
               <p className="mt-4 text-lg text-ink/75">
                 Pastor Brandon meets couples at Bethel Baptist Church on North McGee Drive in Hernando, minutes from Citrus Hills and Beverly Hills and
                 about twenty from Inverness, Lecanto and Crystal River.
@@ -260,7 +304,7 @@ export default function Home() {
       {/* FAQ */}
       <section className="bg-paper">
         <div className="wrap py-16 md:py-24">
-          <Faq items={[faq.therapy, faq.members, faq.cost, faq.where, faq.confidential, faq.start]} />
+          <Faq title="Questions about Christian marriage counseling" items={[faq.therapy, faq.members, faq.cost, faq.where, faq.confidential, faq.start]} />
         </div>
       </section>
 

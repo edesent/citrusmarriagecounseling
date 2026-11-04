@@ -15,7 +15,7 @@ const path = "/premarital-counseling";
 const description = `Christian premarital counseling in Citrus County, FL with Pastor Brandon Bankert in Hernando, ${money(pricing.premaritalSession)} a session. Free first consultation.`;
 
 export const metadata: Metadata = {
-  title: { absolute: "Premarital Counseling in Citrus County, FL | Pastor Brandon Bankert" },
+  title: { absolute: "Christian Premarital Counseling in Citrus County, FL – $62.50/Session" },
   description,
   alternates: { canonical: path },
   openGraph: { title: "Premarital Counseling in Citrus County, FL", description, url: path },
@@ -38,7 +38,7 @@ export default function Premarital() {
       <PageHero
         trail={[{ name: "Premarital counseling", path }]}
         eyebrow="Premarital counseling"
-        title="Premarital counseling in Citrus County, FL"
+        title="Christian premarital counseling in Citrus County, FL"
         lede={
           <p>
             Get ready for marriage with {pastor.styled} before the wedding, at Bethel Baptist Church in Hernando. Start with a free consultation.
@@ -65,7 +65,7 @@ export default function Premarital() {
               shape the sessions around the two of you rather than a script.
             </p>
 
-            <h2>What you will talk through</h2>
+            <h2>What premarital counseling covers</h2>
           </article>
           <ConsultCard />
         </div>
@@ -96,7 +96,7 @@ export default function Premarital() {
             </p>
             <p>Ask Pastor Brandon about the course certificate at your free consultation.</p>
 
-            <h2>Marrying again</h2>
+            <h2>Premarital counseling for second marriages</h2>
             <p>
               Not every engaged couple is young. If one or both of you has been married before, there are grown children, or you are joining two
               households later in life, premarital counseling matters just as much. Those conversations are part of it.
@@ -124,7 +124,7 @@ export default function Premarital() {
 
       <section className="bg-paper">
         <div className="wrap py-16 md:py-24">
-          <Faq items={[faq.premaritalLaw, faq.cost, faq.sessions, faq.members, faq.where, faq.start]} />
+          <Faq title="Premarital counseling questions" items={[faq.premaritalLaw, faq.cost, faq.sessions, faq.members, faq.where, faq.start]} />
         </div>
       </section>
 

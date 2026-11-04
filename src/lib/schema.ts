@@ -1,5 +1,5 @@
 import { areas } from "./areas";
-import { church, phone, place, pastor, practice, pricing, siteUrl } from "./site";
+import { church, money, phone, place, pastor, practice, pricing, siteUrl } from "./site";
 
 /**
  * Structured data (schema.org JSON-LD). The layout prints the practice, the
@@ -49,6 +49,8 @@ export function siteGraph() {
         founder: { "@id": ids.pastor },
         employee: { "@id": ids.pastor },
         parentOrganization: { "@id": ids.church },
+        sameAs: [church.url],
+        priceRange: `Free consultation; ${money(pricing.premaritalSession)} per premarital session`,
         knowsAbout: ["Christian marriage counseling", "Premarital counseling", "Faith-based counseling", "Biblical counseling"],
         makesOffer: [
           {

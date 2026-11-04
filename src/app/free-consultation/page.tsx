@@ -10,7 +10,7 @@ const description =
   "Book a free consultation with Pastor Brandon Bankert for Christian marriage, premarital or faith-based counseling in Citrus County, FL.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Free Consultation | Christian Marriage Counseling in Citrus County, FL" },
+  title: { absolute: "Free Christian Counseling Consultation – Hernando, FL" },
   description,
   alternates: { canonical: path },
   openGraph: { title: "Book a free consultation with Pastor Brandon Bankert", description, url: path },
@@ -28,7 +28,7 @@ export default function FreeConsultation() {
       <PageHero
         trail={[{ name: "Free consultation", path }]}
         eyebrow="Free consultation"
-        title="Book a free consultation"
+        title="Book a free marriage counseling consultation"
         lede={<p>One conversation with Pastor Brandon Bankert, at no cost, before you decide anything.</p>}
       />
       <section className="bg-paper">

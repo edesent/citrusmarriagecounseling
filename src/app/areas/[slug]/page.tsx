@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     a.slug === "hernando" ? ", right here in Hernando" : `, ${a.minutes} minutes away in Hernando`
   }. Free first consultation.`;
   return {
-    title: { absolute: `Christian Marriage Counseling in ${a.name}, FL | Faith-Based Counseling` },
+    title: { absolute: `Christian Marriage & Faith-Based Counseling in ${a.name}, FL` },
     description,
     alternates: { canonical: path },
     openGraph: { title: `Christian marriage counseling in ${a.name}, FL`, description, url: path },

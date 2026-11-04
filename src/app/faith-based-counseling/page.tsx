@@ -15,7 +15,7 @@ const description =
   "Faith-based Christian counseling in Citrus County, FL for individuals and families: grief, family conflict, hard decisions. Pastor Brandon Bankert, Hernando.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Faith-Based Counseling in Citrus County, FL | Pastor Brandon Bankert" },
+  title: { absolute: "Faith-Based Christian Counseling in Citrus County, FL" },
   description,
   alternates: { canonical: path },
   openGraph: { title: "Faith-Based Counseling in Citrus County, FL", description, url: path },
@@ -27,7 +27,7 @@ export default function FaithBased() {
       <PageHero
         trail={[{ name: "Faith-based counseling", path }]}
         eyebrow="Faith-based counseling"
-        title="Faith-based counseling in Citrus County, FL"
+        title="Faith-based Christian counseling in Citrus County, FL"
         lede={
           <p>
             Christian counseling for individuals and families with {pastor.styled} in Hernando: grief, family conflict, hard decisions and questions of
@@ -52,7 +52,7 @@ export default function FaithBased() {
               what to do next.
             </p>
 
-            <h2>What people come to talk about</h2>
+            <h2>What faith-based counseling helps with</h2>
             <ul>
               <li>Grief: losing a husband or wife, a parent, a child, a friend</li>
               <li>Family conflict: a grown child who has gone their own way, a falling-out between siblings, a strained relationship with a parent</li>
@@ -64,7 +64,7 @@ export default function FaithBased() {
               <li>Questions about God, the Bible and salvation that won’t go away</li>
             </ul>
 
-            <h2>How it works</h2>
+            <h2>How faith-based counseling works</h2>
             <p>
               It starts with a <Link href="/free-consultation">free consultation</Link> at Bethel Baptist Church in Hernando. Pastor Brandon will tell
               you honestly how he can help and what it would involve, including the cost, before you commit to anything. Sessions are about an hour.
@@ -95,7 +95,7 @@ export default function FaithBased() {
 
       <section className="bg-paper">
         <div className="wrap pb-16 md:pb-24">
-          <Faq items={[faq.therapy, faq.members, faq.cost, faq.confidential, faq.where, faq.start]} />
+          <Faq title="Faith-based counseling questions" items={[faq.therapy, faq.members, faq.cost, faq.confidential, faq.where, faq.start]} />
         </div>
       </section>
 

@@ -31,7 +31,7 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Christian Marriage Counseling in Citrus County, FL | Pastor Brandon Bankert",
+    default: "Christian Marriage Counseling in Citrus County, FL – Free Consultation",
     template: `%s | ${practice.name}`,
   },
   description,
