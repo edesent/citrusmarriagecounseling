@@ -7,7 +7,7 @@ import { phone, place, siteUrl } from "@/lib/site";
 
 const path = "/free-consultation";
 const description =
-  "Book a free consultation with Pastor Brandon Bankert for Christian marriage counseling, premarital counseling or faith-based counseling in Citrus County, FL. Meet at Bethel Baptist Church, Hernando.";
+  "Book a free consultation with Pastor Brandon Bankert for Christian marriage, premarital or faith-based counseling in Citrus County, FL.";
 
 export const metadata: Metadata = {
   title: { absolute: "Free Consultation | Christian Marriage Counseling in Citrus County, FL" },

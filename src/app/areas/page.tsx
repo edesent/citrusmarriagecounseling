@@ -7,7 +7,7 @@ import { areas } from "@/lib/areas";
 
 const path = "/areas";
 const description =
-  "Christian marriage counseling and faith-based counseling for every community in Citrus County, FL: Inverness, Hernando, Crystal River, Beverly Hills, Lecanto, Homosassa, Floral City and more. Drive times to Bethel Baptist Church, Hernando.";
+  "Christian marriage and faith-based counseling for every Citrus County community: Inverness, Hernando, Crystal River, Beverly Hills, Lecanto, Homosassa and more.";
 
 export const metadata: Metadata = {
   title: { absolute: "Areas Served in Citrus County, FL | Christian Marriage Counseling" },

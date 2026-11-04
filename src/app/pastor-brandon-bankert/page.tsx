@@ -9,7 +9,7 @@ import { church, pastor, siteUrl } from "@/lib/site";
 
 const path = "/pastor-brandon-bankert";
 const description =
-  "Pastor Brandon Bankert of Bethel Baptist Church in Hernando, FL: Bible college graduate, ten years an assistant pastor and Christian school teacher, married since 2011, father of three. Christian marriage counseling across Citrus County.";
+  "Pastor Brandon Bankert of Bethel Baptist Church, Hernando, FL: Bible college graduate, married since 2011, father of three. Christian counseling in Citrus County.";
 
 export const metadata: Metadata = {
   title: { absolute: "Pastor Brandon Bankert | Christian Counselor in Hernando, FL" },

@@ -12,7 +12,7 @@ import { serviceNode } from "@/lib/schema";
 import { money, pastor, pricing } from "@/lib/site";
 
 const path = "/premarital-counseling";
-const description = `Christian premarital counseling in Citrus County, FL: ${pricing.premaritalSessions} sessions with Pastor Brandon Bankert in Hernando, ${money(pricing.premaritalSession)} a session. Communication, money, conflict, family and faith before the wedding. Free first consultation.`;
+const description = `Christian premarital counseling in Citrus County, FL: eight sessions with Pastor Brandon Bankert in Hernando, ${money(pricing.premaritalSession)} a session. Free first consultation.`;
 
 export const metadata: Metadata = {
   title: { absolute: "Premarital Counseling in Citrus County, FL | Pastor Brandon Bankert" },

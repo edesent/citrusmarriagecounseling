@@ -12,10 +12,10 @@ import { otherHelp, pastor } from "@/lib/site";
 
 const path = "/christian-marriage-counseling";
 const description =
-  "Christian marriage counseling in Citrus County, FL with Pastor Brandon Bankert at Bethel Baptist Church, Hernando. Bible-based help for communication, trust, money and family. Free first consultation.";
+  "Bible-based Christian marriage counseling in Citrus County, FL with Pastor Brandon Bankert in Hernando: communication, trust, money and family. Free consultation.";
 
 export const metadata: Metadata = {
-  title: { absolute: "Christian Marriage Counseling in Citrus County, FL | Pastor Brandon Bankert" },
+  title: { absolute: "How Christian Marriage Counseling Works | Sessions, Cost & Help in Citrus County, FL" },
   description,
   alternates: { canonical: path },
   openGraph: { title: "Christian Marriage Counseling in Citrus County, FL", description, url: path },

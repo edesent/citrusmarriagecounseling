@@ -12,7 +12,7 @@ import { otherHelp, pastor } from "@/lib/site";
 
 const path = "/faith-based-counseling";
 const description =
-  "Faith-based Christian counseling in Citrus County, FL for individuals and families, with Pastor Brandon Bankert in Hernando: grief, family conflict, hard decisions and questions of faith. Free first consultation.";
+  "Faith-based Christian counseling in Citrus County, FL for individuals and families: grief, family conflict, hard decisions. Pastor Brandon Bankert, Hernando.";
 
 export const metadata: Metadata = {
   title: { absolute: "Faith-Based Counseling in Citrus County, FL | Pastor Brandon Bankert" },

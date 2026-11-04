@@ -25,7 +25,7 @@ const figtree = localFont({
 });
 
 const description =
-  "Christian marriage counseling and faith-based counseling in Citrus County, Florida, with Pastor Brandon Bankert of Bethel Baptist Church in Hernando. Premarital counseling $62.50 a session. Free first consultation.";
+  "Christian marriage counseling and faith-based counseling in Citrus County, FL with Pastor Brandon Bankert of Bethel Baptist Church, Hernando. Free first consultation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -23,9 +23,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const a = areaBySlug(slug);
   if (!a) return {};
   const path = `/areas/${a.slug}`;
-  const description = `Christian marriage counseling and faith-based counseling for ${a.name}, FL couples and families with Pastor Brandon Bankert${
-    a.slug === "hernando" ? " in Hernando" : `, about ${a.minutes} minutes away in Hernando`
-  }. Premarital counseling ${money(pricing.premaritalSession)} a session. Free first consultation.`;
+  const description = `Christian marriage and faith-based counseling for ${a.name}, FL with Pastor Brandon Bankert${
+    a.slug === "hernando" ? ", right here in Hernando" : `, ${a.minutes} minutes away in Hernando`
+  }. Free first consultation.`;
   return {
     title: { absolute: `Christian Marriage Counseling in ${a.name}, FL | Faith-Based Counseling` },
     description,
