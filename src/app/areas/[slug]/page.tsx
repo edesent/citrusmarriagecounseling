@@ -93,8 +93,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
 
             <h2>Premarital counseling for {a.name} couples</h2>
             <p>
-              Getting married? Premarital counseling is {pricing.premaritalSessions} sessions with Pastor Brandon,{" "}
-              <span className="num">{money(pricing.premaritalSession)}</span> a session. Florida couples who finish a registered premarital course
+              Getting married? Premarital counseling with Pastor Brandon is <span className="num">{money(pricing.premaritalSession)}</span> a
+              session. Florida couples who finish a registered premarital course
               before applying for their license pay a smaller fee and skip the three-day wait
               {a.slug === "inverness" ? "; the Clerk of Court’s office is right here in Inverness" : "; Citrus County licenses are issued by the Clerk of Court in Inverness"}
               . <Link href="/premarital-counseling">Premarital counseling</Link>.

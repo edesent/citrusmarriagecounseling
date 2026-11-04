@@ -67,28 +67,31 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-6 text-white/70">
-              Premarital counseling <span className="num font-semibold text-white">{money(pricing.premaritalSession)}</span> a session ·{" "}
+              Premarital counseling <span className="num font-semibold text-white">{money(pricing.premaritalSession)}</span> a session
+            </p>
+            <p className="mt-1 text-white/70">
               <Link href="/faith-based-counseling" className="link text-white/90">
-                faith-based counseling
+                Faith-based counseling
               </Link>{" "}
               for individuals and families too
             </p>
           </div>
           <figure className="relative mx-auto w-full max-w-md self-end lg:max-w-none">
             <div className="relative overflow-hidden rounded-t-[2.5rem] ring-1 ring-white/10">
+              {/* The family photo cropped tall: 63% across keeps the children, his wife and him in frame. */}
               <Image
-                src="/photos/pastor-brandon-bankert.jpg"
-                alt="Pastor Brandon Bankert of Bethel Baptist Church, Hernando, Florida"
-                width={840}
-                height={1050}
+                src="/photos/pastor-brandon-family.jpg"
+                alt="Pastor Brandon Bankert with his wife and children in front of the cross at Bethel Baptist Church, Hernando"
+                width={1800}
+                height={1350}
                 priority
                 sizes="(min-width: 1024px) 38vw, (min-width: 640px) 28rem, 100vw"
-                className="h-auto w-full"
+                className="aspect-[5/6] w-full object-cover"
+                style={{ objectPosition: "63% 50%" }}
               />
-              {/* Softens the photo's left edge, where his wife stood beside him in the original. */}
-              <span className="pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-spring to-transparent" aria-hidden />
             </div>
-            <figcaption className="absolute bottom-5 left-5 right-5 rounded-2xl bg-spring-deep/92 p-4 text-sm shadow-xl ring-1 ring-white/10 sm:left-auto sm:max-w-[17rem]">
+            {/* Under the photo on phones (it would cover the children); a card over the corner from sm up. */}
+            <figcaption className="bg-spring-deep p-4 text-sm sm:absolute sm:bottom-5 sm:right-5 sm:max-w-[17rem] sm:rounded-2xl sm:bg-spring-deep/92 sm:shadow-xl sm:ring-1 sm:ring-white/10">
               <span className="display-soft block text-lg text-white">{pastor.styled}</span>
               <span className="text-white/75">
                 Married since <span className="num">{pastor.marriedSince}</span>, father of three, pastor of Bethel Baptist Church
@@ -161,7 +164,7 @@ export default function Home() {
             <h2 className="display mt-3 text-4xl md:text-5xl">Getting married in Citrus County?</h2>
             <p className="mt-5 flex items-baseline gap-3">
               <span className="num text-5xl font-extrabold tracking-tight text-spring">{money(pricing.premaritalSession)}</span>
-              <span className="text-lg text-ink/70">a session, {pricing.premaritalSessions} sessions before the wedding</span>
+              <span className="text-lg text-ink/70">a session</span>
             </p>
             <p className="mt-5 text-lg text-ink/80">
               Talk through the things couples fight about later while it is still easy: how you will handle money, conflict, family, children, faith and
@@ -201,10 +204,10 @@ export default function Home() {
           </div>
           <figure className="overflow-hidden rounded-[2rem] ring-1 ring-white/10">
             <Image
-              src="/photos/pastor-brandon-family.jpg"
-              alt="Pastor Brandon Bankert with his wife and children in front of the cross at Bethel Baptist Church"
-              width={1800}
-              height={1350}
+              src="/photos/pastor-preaching.jpg"
+              alt="Pastor Brandon Bankert preaching at Bethel Baptist Church in Hernando"
+              width={1280}
+              height={720}
               sizes="(min-width: 1024px) 45vw, 100vw"
               className="h-auto w-full"
             />

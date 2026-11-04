@@ -23,7 +23,7 @@ export const faq = {
   },
   cost: {
     q: "What does it cost?",
-    a: `The first consultation is free. Premarital counseling is ${money(pricing.premaritalSession)} a session, over ${pricing.premaritalSessions} sessions. ${marriageCost}`,
+    a: `The first consultation is free. Premarital counseling is ${money(pricing.premaritalSession)} a session. ${marriageCost}`,
   },
   where: {
     q: "Where do we meet?",
