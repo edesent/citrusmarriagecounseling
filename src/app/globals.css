@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 /*
- * Colours: black, cream paper, and lime, the colour of the threefold cord
- * (three limes for Citrus County). Black matches Bethel Baptist Church's own
- * header and footer.
- *   night   the black surfaces (hero, page heads, footer, dark buttons)
- *   accent  lime for text and lines: -deep reads on cream, -light on black
+ * Colours and type follow Bethel Baptist Church's own site: black bars, cream
+ * paper, gold lettering, DM Serif Display with a line of Allura script. Lime
+ * is this ministry's own: the threefold cord and the call-to-action buttons.
+ *   night   the black surfaces (header, hero, page heads, footer, dark buttons)
+ *   accent  Bethel's gold for lettering and lines: -deep reads on cream, -light on black
  *   lime    the cord itself and the call-to-action buttons
  */
 :root {
@@ -18,10 +18,10 @@
   --night-deep: #070807;
   --night-mid: #31352f;
   --night-pale: #e9f2d8;
-  --accent: #6c9f2a;
-  --accent-deep: #4a7514;
-  --accent-light: #c3e37c;
-  --accent-pale: #edf6d8;
+  --accent: #a7821a;
+  --accent-deep: #7f6210;
+  --accent-light: #e8c86a;
+  --accent-pale: #f6e8bf;
   --lime: #9ccc3c;
   --lime-light: #d6ec9e;
   --lime-deep: #6c9f2a;
@@ -45,7 +45,8 @@
   --color-lime-light: var(--lime-light);
   --color-lime-deep: var(--lime-deep);
   /* Set by next/font/local variables in layout.tsx */
-  --font-display: var(--font-newsreader, ui-serif, Georgia, serif);
+  --font-display: var(--font-dm-serif, ui-serif, Georgia, serif);
+  --font-script: var(--font-allura, cursive);
   --font-sans: var(--font-figtree, ui-sans-serif, system-ui, sans-serif);
 }
 
@@ -81,32 +82,37 @@ body {
     }
   }
 
-  /* Newsreader at display size: optical size up, tight, a little heavier than book weight. */
+  /* DM Serif Display, as on Bethel's site: heavy, high-contrast, set big and tight. */
   .display {
     font-family: var(--font-display);
-    font-weight: 480;
-    font-variation-settings: "opsz" 72;
-    letter-spacing: -0.022em;
-    line-height: 1.02;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.98;
   }
   .display-soft {
     font-family: var(--font-display);
-    font-weight: 500;
-    font-variation-settings: "opsz" 36;
-    letter-spacing: -0.012em;
-    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.12;
   }
   .serif-italic {
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 400;
-    font-variation-settings: "opsz" 48;
   }
+  /* Allura, Bethel's script, for one line at a time in gold. */
+  .script {
+    font-family: var(--font-script);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+  /* Thin, wide capitals in gold, Bethel's eyebrow. */
   .eyebrow {
     font-family: var(--font-sans);
-    font-weight: 600;
-    font-size: 0.74rem;
-    letter-spacing: 0.22em;
+    font-weight: 500;
+    font-size: 0.76rem;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
   }
   /* Prices, times and distances always in the sans, with even figures. */
@@ -169,8 +175,7 @@ body {
   }
   .copy h2 {
     font-family: var(--font-display);
-    font-weight: 500;
-    font-variation-settings: "opsz" 48;
+    font-weight: 400;
     font-size: clamp(1.6rem, 2.6vw, 2.15rem);
     line-height: 1.12;
     letter-spacing: -0.015em;

@@ -10,12 +10,19 @@ import { siteGraph } from "@/lib/schema";
 import { practice, siteUrl } from "@/lib/site";
 import "./globals.css";
 
-const newsreader = localFont({
+// Bethel Baptist Church's own type: DM Serif Display, Allura, Figtree.
+const dmSerif = localFont({
   src: [
-    { path: "../fonts/newsreader-200-800.woff2", weight: "200 800", style: "normal" },
-    { path: "../fonts/newsreader-200-800-italic.woff2", weight: "200 800", style: "italic" },
+    { path: "../fonts/dm-serif-display-400.woff2", weight: "400", style: "normal" },
+    { path: "../fonts/dm-serif-display-400-italic.woff2", weight: "400", style: "italic" },
   ],
-  variable: "--font-newsreader",
+  variable: "--font-dm-serif",
+  display: "swap",
+});
+const allura = localFont({
+  src: "../fonts/allura-400.woff2",
+  weight: "400",
+  variable: "--font-allura",
   display: "swap",
 });
 const figtree = localFont({
@@ -56,7 +63,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US" className={`${newsreader.variable} ${figtree.variable}`}>
+    <html lang="en-US" className={`${dmSerif.variable} ${allura.variable} ${figtree.variable}`}>
       <body>
         <Header />
         <main>{children}</main>

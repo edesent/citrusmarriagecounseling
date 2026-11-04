@@ -82,7 +82,9 @@ export default function Home() {
             <h1 className="display mt-4 text-[2.75rem] sm:text-6xl lg:text-[4.6rem]">
               Christian marriage counseling in Citrus County, Florida
             </h1>
-            <p className="mt-6 max-w-2xl text-lg text-white/85 md:text-xl">
+            {/* Bethel's gold script, one line: Ecclesiastes 4:12, the threefold cord. */}
+            <p className="script mt-3 text-[2rem] text-accent-light sm:text-[2.6rem]">A threefold cord is not quickly broken.</p>
+            <p className="mt-5 max-w-2xl text-lg text-white/85 md:text-xl">
               Sit down with {pastor.styled} at Bethel Baptist Church in Hernando. Honest, Bible-based counsel for couples who are struggling, and for
               couples getting ready to marry. Your first consultation is free.
             </p>
