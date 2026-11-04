@@ -69,7 +69,7 @@ function Strands({ segs, width, gap }: { segs: Seg[]; width: number; gap: string
 export default function Braid({
   id,
   gap,
-  colors = ["var(--brass)", "var(--brass-light)", "var(--spring-pale)"],
+  colors = ["var(--lime)", "var(--lime-light)", "var(--lime-deep)"],
   height = 34,
   period = 132,
   width = 7,
@@ -97,21 +97,29 @@ export default function Braid({
   );
 }
 
-/** The small mark beside the wordmark: one and a half turns of the cord. */
+/**
+ * The mark beside the wordmark: the cord stood upright and seen close, a little
+ * over one turn, with thick strands so it reads at header size.
+ */
 export function Mark({ gap, className = "", colors }: { gap: string; className?: string; colors?: [string, string, string] }) {
   const period = 30;
-  const height = 22;
+  const across = 22;
+  const length = 36;
   const segs = braidSegments({
     period,
-    height,
-    amplitude: 7.2,
-    colors: colors ?? ["var(--brass)", "var(--spring)", "var(--spring-mid)"],
+    height: across,
+    amplitude: 6.4,
+    colors: colors ?? ["var(--lime-deep)", "var(--spring)", "var(--lime)"],
     step: 1.5,
-    to: period * 1.5,
+    from: 3,
+    to: 3 + length,
   });
   return (
-    <svg className={className} viewBox={`0 0 ${period * 1.5} ${height}`} aria-hidden focusable="false">
-      <Strands segs={segs} width={3.4} gap={gap} />
+    <svg className={className} viewBox={`0 0 ${across} ${length}`} aria-hidden focusable="false">
+      {/* Drawn along x, then turned upright: (x, y) → (across − y, x − 3). */}
+      <g transform={`matrix(0 1 -1 0 ${across} -3)`}>
+        <Strands segs={segs} width={4.8} gap={gap} />
+      </g>
     </svg>
   );
 }

@@ -11,8 +11,8 @@ function Wordmark({ dark = false }: { dark?: boolean }) {
     <span className="flex items-center gap-2.5">
       <Mark
         gap={dark ? "var(--spring-deep)" : "var(--paper)"}
-        colors={dark ? ["var(--brass-light)", "var(--spring-pale)", "var(--brass)"] : undefined}
-        className="h-[1.35rem] w-auto shrink-0 md:h-6"
+        colors={dark ? ["var(--lime)", "var(--lime-light)", "var(--lime-deep)"] : undefined}
+        className="h-10 w-auto shrink-0 md:h-12"
       />
       <span className={`display-soft whitespace-nowrap text-[0.94rem] leading-none min-[390px]:text-[1.04rem] sm:text-[1.3rem] md:text-[1.45rem] ${dark ? "text-white" : "text-spring-deep"}`}>
         Citrus Marriage Counseling

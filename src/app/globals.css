@@ -19,6 +19,10 @@
   --brass-deep: #7d5d0f;
   --brass-light: #e8c873;
   --brass-pale: #f5e9c8;
+  /* The threefold cord: three limes, for Citrus County. */
+  --lime: #9ccc3c;
+  --lime-light: #d6ec9e;
+  --lime-deep: #6c9f2a;
 }
 
 @theme inline {
@@ -35,6 +39,9 @@
   --color-brass-deep: var(--brass-deep);
   --color-brass-light: var(--brass-light);
   --color-brass-pale: var(--brass-pale);
+  --color-lime: var(--lime);
+  --color-lime-light: var(--lime-light);
+  --color-lime-deep: var(--lime-deep);
   /* Set by next/font/local variables in layout.tsx */
   --font-display: var(--font-newsreader, ui-serif, Georgia, serif);
   --font-sans: var(--font-figtree, ui-sans-serif, system-ui, sans-serif);
