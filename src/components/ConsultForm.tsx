@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useForm } from "./useForm";
 
 const field =
-  "mt-1 w-full rounded-xl border border-ink/15 bg-white px-3.5 py-2.5 text-ink outline-none transition focus:border-brass focus:ring-2 focus:ring-brass/25";
+  "mt-1 w-full rounded-xl border border-ink/15 bg-white px-3.5 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/25";
 const label = "block text-sm font-semibold text-ink/80";
 
 export const topics = ["Marriage counseling", "Premarital counseling", "Faith-based counseling for me", "Not sure yet"] as const;
@@ -16,8 +16,8 @@ export default function ConsultForm({ topic = "Marriage counseling" }: { topic?:
 
   if (status === "sent")
     return (
-      <div className="rounded-2xl bg-spring-pale p-6">
-        <p className="display-soft text-2xl text-spring-deep">Thank you. Your request is with Pastor Brandon.</p>
+      <div className="rounded-2xl bg-night-pale p-6">
+        <p className="display-soft text-2xl text-night-deep">Thank you. Your request is with Pastor Brandon.</p>
         <p className="mt-2 text-ink/80">He answers himself and will get back to you to set a time for your free consultation.</p>
       </div>
     );

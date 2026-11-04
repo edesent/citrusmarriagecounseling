@@ -7,13 +7,13 @@ export default function CtaBand({ heading = "Start with a free conversation.", c
   return (
     <section className="bg-cream">
       <div className="wrap py-16 md:py-20">
-        <div className="grid items-center gap-8 rounded-[2rem] bg-spring-deep p-7 text-white shadow-[0_40px_80px_-50px_rgba(11,43,40,0.9)] md:grid-cols-[auto_1fr_auto] md:p-10">
+        <div className="grid items-center gap-8 rounded-[2rem] bg-night-deep p-7 text-white shadow-[0_40px_80px_-50px_rgba(7,8,7,0.9)] md:grid-cols-[auto_1fr_auto] md:p-10">
           <Image
             src="/photos/pastor-face.jpg"
             alt="Pastor Brandon Bankert"
             width={480}
             height={480}
-            className="h-24 w-24 rounded-full object-cover ring-4 ring-brass/70 md:h-28 md:w-28"
+            className="h-24 w-24 rounded-full object-cover ring-4 ring-accent/70 md:h-28 md:w-28"
           />
           <div>
             <h2 className="display-soft text-3xl md:text-4xl">{heading}</h2>
@@ -26,7 +26,7 @@ export default function CtaBand({ heading = "Start with a free conversation.", c
             <Link href="/free-consultation" className="btn btn-lime">
               Book a free consultation
             </Link>
-            <a href={`tel:${phone.tel}`} className="text-center font-semibold text-brass-light md:text-right">
+            <a href={`tel:${phone.tel}`} className="text-center font-semibold text-accent-light md:text-right">
               or call <span className="num">{phone.display}</span>
             </a>
           </div>

@@ -12,7 +12,7 @@ export default function Faq({ items, title = "Questions people ask", id = "quest
           <details key={it.q} className="group py-1">
             <summary className="flex items-start justify-between gap-6 py-4 text-lg font-semibold">
               <span>{it.q}</span>
-              <span className="faq-plus mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full border border-brass/60 text-brass-deep transition-transform" aria-hidden>
+              <span className="faq-plus mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full border border-accent/60 text-accent-deep transition-transform" aria-hidden>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
                   <path d="M6 1.5v9M1.5 6h9" />
                 </svg>

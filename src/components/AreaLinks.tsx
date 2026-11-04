@@ -13,7 +13,7 @@ export default function AreaLinks({ service, exclude }: { service: string; exclu
             .map((a) => (
               <li key={a.slug}>
                 <Link href={`/areas/${a.slug}`} className="group flex items-baseline justify-between gap-3 border-b border-ink/10 pb-3">
-                  <span className="font-semibold group-hover:text-brass-deep">
+                  <span className="font-semibold group-hover:text-accent-deep">
                     {service} in {a.name}
                   </span>
                   <span className="num shrink-0 text-sm text-muted">{a.minutes} min</span>

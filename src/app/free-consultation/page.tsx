@@ -41,7 +41,7 @@ export default function FreeConsultation() {
             <ol className="mt-6 space-y-6">
               {next.map(([h, p], i) => (
                 <li key={h} className="flex gap-4">
-                  <span className="display grid h-10 w-10 shrink-0 place-items-center rounded-full bg-spring text-xl text-white">{i + 1}</span>
+                  <span className="display grid h-10 w-10 shrink-0 place-items-center rounded-full bg-night text-xl text-white">{i + 1}</span>
                   <p className="pt-1.5 text-ink/80">
                     <strong className="text-ink">{h}</strong> {p}
                   </p>
@@ -50,7 +50,7 @@ export default function FreeConsultation() {
             </ol>
             <div className="mt-10 rounded-2xl border border-ink/10 p-5">
               <p className="font-semibold">Rather call?</p>
-              <a href={`tel:${phone.tel}`} className="num display-soft mt-1 block text-3xl text-spring">
+              <a href={`tel:${phone.tel}`} className="num display-soft mt-1 block text-3xl text-night">
                 {phone.display}
               </a>
               <p className="mt-4 font-semibold">Where you will meet</p>
@@ -59,7 +59,7 @@ export default function FreeConsultation() {
                 <br />
                 {place.street}, {place.city}, {place.stateCode} <span className="num">{place.zip}</span>
               </address>
-              <a href={place.directions} className="link mt-2 inline-block font-semibold text-spring" rel="noopener">
+              <a href={place.directions} className="link mt-2 inline-block font-semibold text-night" rel="noopener">
                 Directions
               </a>
             </div>

@@ -1,25 +1,27 @@
 @import "tailwindcss";
 
 /*
- * Colours: the deep green of Citrus County's spring water, cream paper, and
- * the brass gold of Bethel Baptist Church's logo, so the ministry reads as
- * Bethel's without wearing the church's black and brown.
+ * Colours: black, cream paper, and lime, the colour of the threefold cord
+ * (three limes for Citrus County). Black matches Bethel Baptist Church's own
+ * header and footer.
+ *   night   the black surfaces (hero, page heads, footer, dark buttons)
+ *   accent  lime for text and lines: -deep reads on cream, -light on black
+ *   lime    the cord itself and the call-to-action buttons
  */
 :root {
-  --paper: #fbf8f2;
-  --cream: #f4eee2;
-  --cream-deep: #e9e0cf;
-  --ink: #17201f;
-  --muted: #56615e;
-  --spring: #12403c;
-  --spring-deep: #0b2b28;
-  --spring-mid: #1f5c55;
-  --spring-pale: #dde9e4;
-  --brass: #b3861d;
-  --brass-deep: #7d5d0f;
-  --brass-light: #e8c873;
-  --brass-pale: #f5e9c8;
-  /* The threefold cord: three limes, for Citrus County. */
+  --paper: #fbf9f3;
+  --cream: #f3f1e8;
+  --cream-deep: #e7e5d9;
+  --ink: #151715;
+  --muted: #595e57;
+  --night: #0f100f;
+  --night-deep: #070807;
+  --night-mid: #31352f;
+  --night-pale: #e9f2d8;
+  --accent: #6c9f2a;
+  --accent-deep: #4a7514;
+  --accent-light: #c3e37c;
+  --accent-pale: #edf6d8;
   --lime: #9ccc3c;
   --lime-light: #d6ec9e;
   --lime-deep: #6c9f2a;
@@ -31,14 +33,14 @@
   --color-cream-deep: var(--cream-deep);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
-  --color-spring: var(--spring);
-  --color-spring-deep: var(--spring-deep);
-  --color-spring-mid: var(--spring-mid);
-  --color-spring-pale: var(--spring-pale);
-  --color-brass: var(--brass);
-  --color-brass-deep: var(--brass-deep);
-  --color-brass-light: var(--brass-light);
-  --color-brass-pale: var(--brass-pale);
+  --color-night: var(--night);
+  --color-night-deep: var(--night-deep);
+  --color-night-mid: var(--night-mid);
+  --color-night-pale: var(--night-pale);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-light: var(--accent-light);
+  --color-accent-pale: var(--accent-pale);
   --color-lime: var(--lime);
   --color-lime-light: var(--lime-light);
   --color-lime-deep: var(--lime-deep);
@@ -61,8 +63,8 @@ body {
 }
 
 ::selection {
-  background: var(--brass-pale);
-  color: var(--spring-deep);
+  background: var(--accent-pale);
+  color: var(--night-deep);
 }
 
 /* Custom classes must live in @layer components or Tailwind utilities can't override them. */
@@ -131,18 +133,18 @@ body {
   /* The main call to action: lime, like the cord, with dark text (white on lime is too faint to read). */
   .btn-lime {
     background: var(--lime);
-    color: var(--spring-deep);
+    color: var(--night-deep);
     box-shadow: 0 14px 30px -16px rgba(108, 159, 42, 0.95);
   }
   .btn-lime:hover {
     background: #b4dc5c;
   }
-  .btn-spring {
-    background: var(--spring);
+  .btn-night {
+    background: var(--night);
     color: #fff;
   }
-  .btn-spring:hover {
-    background: var(--spring-deep);
+  .btn-night:hover {
+    background: var(--night-deep);
   }
   .btn-line {
     border: 1.5px solid currentColor;
@@ -153,12 +155,12 @@ body {
 
   .link {
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, var(--brass) 70%, transparent);
+    text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
     text-underline-offset: 0.22em;
     text-decoration-thickness: 1.5px;
   }
   .link:hover {
-    text-decoration-color: var(--brass);
+    text-decoration-color: var(--accent);
   }
 
   /* Long-form copy on the service and area pages. */
@@ -197,11 +199,11 @@ body {
     top: 0.68em;
     width: 0.55rem;
     height: 2px;
-    background: var(--brass);
+    background: var(--accent);
   }
   .copy a {
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, var(--brass) 70%, transparent);
+    text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
     text-underline-offset: 0.22em;
   }
 
@@ -219,6 +221,6 @@ body {
 
 /* The free-consultation popup (ConsultPopup.tsx). */
 .consult-dialog::backdrop {
-  background: rgb(11 43 40 / 0.72);
+  background: rgb(7 8 7 / 0.72);
   backdrop-filter: blur(3px);
 }

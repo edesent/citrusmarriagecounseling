@@ -39,7 +39,7 @@ export const areas: Area[] = [
       "Hernando is where Pastor Brandon meets people. Bethel Baptist Church sits on North McGee Drive, a few minutes off US 41 and CR 486, so for most of Hernando the drive is shorter than the wait at a doctor’s office.",
       "Bethel has been a Hernando church since 1984. Couples who come for counseling are welcome on Sunday too, but nobody has to visit the church, join, or sit through a sales talk to sit down with the pastor.",
     ],
-    nearby: ["citrus-hills", "beverly-hills", "inverness", "citrus-springs"],
+    nearby: ["citrus-hills", "beverly-hills", "inverness", "citrus-nights"],
   },
   {
     slug: "inverness",
@@ -123,10 +123,10 @@ export const areas: Area[] = [
       "Pine Ridge sits north of Beverly Hills, and the drive to Hernando runs through Beverly Hills on Roosevelt and Forest Ridge Boulevards, about twenty minutes.",
       "Out here a marriage can feel private, with neighbors a long way off. That is no reason to carry a hard season alone. A free first conversation with Pastor Brandon is a quiet place to start.",
     ],
-    nearby: ["beverly-hills", "citrus-springs", "citrus-hills", "hernando"],
+    nearby: ["beverly-hills", "citrus-nights", "citrus-hills", "hernando"],
   },
   {
-    slug: "citrus-springs",
+    slug: "citrus-nights",
     name: "Citrus Springs",
     alsoServes: ["Holder"],
     mapKey: "Citrus Springs",

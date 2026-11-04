@@ -10,11 +10,11 @@ function Wordmark({ dark = false }: { dark?: boolean }) {
   return (
     <span className="flex items-center gap-2.5">
       <Mark
-        gap={dark ? "var(--spring-deep)" : "var(--paper)"}
+        gap={dark ? "var(--night-deep)" : "var(--paper)"}
         colors={dark ? ["var(--lime)", "var(--lime-light)", "var(--lime-deep)"] : undefined}
         className="h-10 w-auto shrink-0 md:h-12"
       />
-      <span className={`display-soft whitespace-nowrap text-[0.94rem] leading-none min-[390px]:text-[1.04rem] sm:text-[1.3rem] md:text-[1.45rem] ${dark ? "text-white" : "text-spring-deep"}`}>
+      <span className={`display-soft whitespace-nowrap text-[0.94rem] leading-none min-[390px]:text-[1.04rem] sm:text-[1.3rem] md:text-[1.45rem] ${dark ? "text-white" : "text-night-deep"}`}>
         Citrus Marriage Counseling
       </span>
     </span>
@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-ink/8 bg-paper/97 shadow-[0_12px_30px_-26px_rgba(11,43,40,0.6)]">
+      <header className="sticky top-0 z-40 border-b border-ink/8 bg-paper/97 shadow-[0_12px_30px_-26px_rgba(7,8,7,0.6)]">
         <div className="wrap flex h-[4.5rem] items-center justify-between gap-2 sm:gap-4 md:h-20">
           <Link href="/" aria-label="Citrus Marriage Counseling, home">
             <Wordmark />
@@ -42,7 +42,7 @@ export default function Header() {
               <Link
                 key={n.href}
                 href={n.href}
-                className={`rounded-full px-3 py-2 text-[0.95rem] font-semibold transition hover:bg-spring/6 ${path.startsWith(n.href) ? "text-brass-deep" : "text-ink"}`}
+                className={`rounded-full px-3 py-2 text-[0.95rem] font-semibold transition hover:bg-night/6 ${path.startsWith(n.href) ? "text-accent-deep" : "text-ink"}`}
               >
                 {n.label}
               </Link>
@@ -54,7 +54,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border-2 border-spring/70 px-3 py-2 text-sm font-bold text-spring min-[375px]:px-4 lg:hidden"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border-2 border-night/70 px-3 py-2 text-sm font-bold text-night min-[375px]:px-4 lg:hidden"
             aria-expanded={open}
             aria-controls="phone-menu"
           >
@@ -69,7 +69,7 @@ export default function Header() {
       {/* A sibling of the header, not a child: a fixed layer inside a sticky bar gets trapped on some phones. */}
       <div
         id="phone-menu"
-        className={`fixed inset-0 z-50 flex flex-col bg-spring-deep text-white transition-opacity duration-200 lg:hidden ${open ? "opacity-100" : "pointer-events-none opacity-0"}`}
+        className={`fixed inset-0 z-50 flex flex-col bg-night-deep text-white transition-opacity duration-200 lg:hidden ${open ? "opacity-100" : "pointer-events-none opacity-0"}`}
         aria-hidden={!open}
       >
         <div className="wrap flex h-[4.5rem] items-center justify-between">
@@ -90,7 +90,7 @@ export default function Header() {
           <Link href="/free-consultation" className="btn btn-lime mt-8" tabIndex={open ? 0 : -1}>
             Book a free consultation
           </Link>
-          <a href={`tel:${phone.tel}`} className="mt-4 text-center font-semibold text-brass-light" tabIndex={open ? 0 : -1}>
+          <a href={`tel:${phone.tel}`} className="mt-4 text-center font-semibold text-accent-light" tabIndex={open ? 0 : -1}>
             Or call <span className="num">{phone.display}</span>
           </a>
         </nav>

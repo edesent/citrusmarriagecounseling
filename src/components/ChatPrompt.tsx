@@ -36,7 +36,7 @@ export default function ChatPrompt() {
     <div className="fixed bottom-4 right-4 z-[45] sm:bottom-6 sm:right-6">
       <Link
         href="/free-consultation"
-        className="flex items-center gap-2.5 rounded-full bg-spring py-3 pl-4 pr-5 text-sm font-bold text-white shadow-[0_18px_40px_-14px_rgba(0,0,0,0.6)] ring-2 ring-white/70 hover:bg-spring-deep"
+        className="flex items-center gap-2.5 rounded-full bg-night py-3 pl-4 pr-5 text-sm font-bold text-white shadow-[0_18px_40px_-14px_rgba(0,0,0,0.6)] ring-2 ring-white/70 hover:bg-night-deep"
       >
         Message Pastor Brandon
       </Link>

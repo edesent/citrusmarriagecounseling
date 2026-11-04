@@ -63,7 +63,7 @@ export default function ConsultPopup() {
         <div className="max-h-[calc(100dvh-1.5rem)] overflow-y-auto p-5 sm:p-8">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-center gap-4">
-              <Image src="/photos/pastor-face.jpg" alt="Pastor Brandon Bankert" width={480} height={480} className="h-14 w-14 rounded-full object-cover ring-2 ring-brass" />
+              <Image src="/photos/pastor-face.jpg" alt="Pastor Brandon Bankert" width={480} height={480} className="h-14 w-14 rounded-full object-cover ring-2 ring-accent" />
               <div>
                 <h2 id="consult-title" className="display-soft text-2xl sm:text-3xl">
                   Book a free consultation
@@ -87,7 +87,7 @@ export default function ConsultPopup() {
           </div>
           <p className="mt-6 border-t border-ink/10 pt-4 text-sm text-muted">
             Rather call?{" "}
-            <a href={`tel:${phone.tel}`} className="link num font-semibold text-spring">
+            <a href={`tel:${phone.tel}`} className="link num font-semibold text-night">
               {phone.display}
             </a>
           </p>

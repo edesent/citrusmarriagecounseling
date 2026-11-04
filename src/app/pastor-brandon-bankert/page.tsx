@@ -50,10 +50,10 @@ export default function About() {
       <section className="bg-paper">
         <div className="wrap grid gap-14 py-14 md:py-20 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="eyebrow text-brass-deep">In his own words</p>
+            <p className="eyebrow text-accent-deep">In his own words</p>
             <div className="mt-4 space-y-5">
               {inHisWords.map((p, i) => (
-                <p key={i} className={i === inHisWords.length - 1 ? "serif-italic text-3xl leading-snug text-spring-deep" : "text-lg text-ink/85"}>
+                <p key={i} className={i === inHisWords.length - 1 ? "serif-italic text-3xl leading-snug text-night-deep" : "text-lg text-ink/85"}>
                   {i === inHisWords.length - 1 ? `“${p}”` : p}
                 </p>
               ))}
@@ -66,18 +66,18 @@ export default function About() {
               <Link href="/free-consultation" className="btn btn-lime">
                 Book a free consultation
               </Link>
-              <Link href="/christian-marriage-counseling" className="btn btn-line text-spring">
+              <Link href="/christian-marriage-counseling" className="btn btn-line text-night">
                 Christian marriage counseling
               </Link>
             </div>
           </div>
           <div>
-            <p className="eyebrow text-brass-deep">Along the way</p>
-            <ol className="mt-4 border-l-2 border-brass/40">
+            <p className="eyebrow text-accent-deep">Along the way</p>
+            <ol className="mt-4 border-l-2 border-accent/40">
               {timeline.map((t) => (
                 <li key={t.when} className="relative pb-6 pl-6 last:pb-0">
-                  <span className="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-brass ring-4 ring-paper" aria-hidden />
-                  <span className="num block text-sm font-bold uppercase tracking-wider text-brass-deep">{t.when}</span>
+                  <span className="absolute -left-[7px] top-2 h-3 w-3 rounded-full bg-accent ring-4 ring-paper" aria-hidden />
+                  <span className="num block text-sm font-bold uppercase tracking-wider text-accent-deep">{t.when}</span>
                   <span className="text-ink/85">{t.what}</span>
                 </li>
               ))}
@@ -124,7 +124,7 @@ export default function About() {
               You never have to visit or join Bethel to be counseled. If you would like to, Sunday School is at 10:00 and the morning service at 11:00,
               with lunch together afterward.
             </p>
-            <a href={church.url} className="btn btn-line mt-6 text-spring" rel="noopener">
+            <a href={church.url} className="btn btn-line mt-6 text-night" rel="noopener">
               Visit {church.name}’s website
             </a>
           </div>

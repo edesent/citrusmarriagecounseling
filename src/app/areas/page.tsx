@@ -44,7 +44,7 @@ export default function Areas() {
                 <li key={a.slug}>
                   <Link href={`/areas/${a.slug}`} className="group flex items-baseline justify-between gap-4 border-b border-ink/10 py-4">
                     <span>
-                      <span className="display-soft block text-2xl group-hover:text-brass-deep">{a.name}</span>
+                      <span className="display-soft block text-2xl group-hover:text-accent-deep">{a.name}</span>
                       {a.alsoServes.length > 0 && <span className="text-sm text-muted">Also {a.alsoServes.join(", ")}</span>}
                     </span>
                     <span className="num shrink-0 text-right text-sm text-muted">
