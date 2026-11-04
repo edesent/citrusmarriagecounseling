@@ -59,6 +59,28 @@ export default function About() {
                 </p>
               ))}
             </div>
+            <div className="mt-8 rounded-2xl border border-accent/30 bg-cream p-5">
+              <p className="eyebrow text-accent-deep">Trained for this</p>
+              <p className="mt-2 text-ink/85">
+                Beyond Bible college and his years as an assistant pastor, Pastor Brandon has completed a number of counseling certifications, and he
+                keeps adding to that training. It shapes how he listens, what he asks, and when he says a doctor or a licensed professional needs to
+                be part of the picture.
+              </p>
+              {pastor.certifications.length > 0 && (
+                <ul className="mt-3 space-y-1.5 text-ink/85">
+                  {pastor.certifications.map((c) => (
+                    <li key={c.name} className="flex gap-2">
+                      <span className="mt-[0.6em] h-[2px] w-3 shrink-0 bg-accent" aria-hidden />
+                      <span>
+                        <strong>{c.name}</strong>
+                        {c.by && `, ${c.by}`}
+                        {c.year && <span className="num text-muted"> · {c.year}</span>}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
             <p className="mt-8 text-lg text-ink/85">
               Pastor Brandon counsels the way he preaches: from the King James Bible, plainly, and with the people in front of him in mind. Couples
               meet with him at the church on North McGee Drive in Hernando, and the first conversation is always free.

@@ -27,7 +27,7 @@ export function GET() {
 
 ## Key facts
 
-- Counselor: ${pastor.styled}, pastor of ${church.name} (${church.url}). ${pastor.college} graduate (${pastor.collegeYear}); ten years an assistant pastor and Christian school teacher; married since ${pastor.marriedSince}; father of three.
+- Counselor: ${pastor.styled}, pastor of ${church.name} (${church.url}). ${pastor.college} graduate (${pastor.collegeYear}); has completed counseling certifications; ten years an assistant pastor and Christian school teacher; married since ${pastor.marriedSince}; father of three.
 - Approach: Christian, Bible-based (King James Bible) counseling from a pastor, under the oversight of ${church.name}. It is not licensed therapy; he refers people to doctors and licensed professionals when that is what they need.
 - Location: ${place.name}, ${place.street}, ${place.city}, ${place.stateCode} ${place.zip}, just off CR 486.
 - Phone: ${phone.display}

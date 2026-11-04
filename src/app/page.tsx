@@ -56,7 +56,7 @@ const glance: [string, React.ReactNode][] = [
   ],
   [
     "Counselor",
-    `${pastor.styled}, pastor of ${church.name}. ${pastor.college} graduate (${pastor.collegeYear}), married since ${pastor.marriedSince}, father of three.`,
+    `${pastor.styled}, pastor of ${church.name}. ${pastor.college} graduate (${pastor.collegeYear}) with counseling certifications, married since ${pastor.marriedSince}, father of three.`,
   ],
   ["Where", `${place.name}, ${place.street}, ${place.city}, ${place.stateCode} ${place.zip}, just off CR 486.`],
   ["Who it serves", "Couples, engaged couples, individuals and families across Citrus County: Inverness, Hernando, Crystal River, Beverly Hills, Lecanto, Homosassa, Floral City and more."],

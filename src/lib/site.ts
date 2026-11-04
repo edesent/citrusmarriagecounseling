@@ -49,6 +49,12 @@ export const pastor = {
   collegeYear: 2003,
   ordained: "December 2025",
   heartLine: "God has given me a heart for the lost and a love for God’s people.",
+  /**
+   * Counseling certifications he has completed (Eli, by phone, 2026-11-04: "a lot
+   * of certifications for counseling"). Names not yet supplied; add each as
+   * { name, by, year? } and the page lists them. Never invent one.
+   */
+  certifications: [] as { name: string; by?: string; year?: string }[],
 };
 
 /**
