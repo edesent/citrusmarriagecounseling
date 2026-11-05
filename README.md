@@ -38,9 +38,10 @@ Next.js 16 (App Router), Tailwind 4, self-hosted fonts (Newsreader + Figtree), d
 - **Area pages** must each carry facts about that place (drive, roads, local notes). Pages that only swap the town name
   are treated as spam by search engines.
 - **No demo tracking script.** Bethel is a paying client.
-- **Colours (Eli's pick): black and lime.** `night*` is the black surfaces, `accent*` is lime for text and lines
-  (`accent-deep` on cream, `accent-light` on black), `lime*` is the cord and the call-to-action buttons, which take
-  dark text (white on lime is too faint). No gold.
+- **Colours: Bethel's cream, black and gold. No lime** (Eli, 2026-11-05: lime didn't go with the gold). `night*` is
+  the black surfaces, `accent*` is Bethel's gold for text and lines (`accent-deep` on cream, `accent-light` on black),
+  `gold*` is a brighter gold for the cord and the call-to-action buttons, which take dark text (white on that gold is
+  too faint).
 - **Free consultation opens as a popup** (`src/components/ConsultPopup.tsx`). Links still point at `/free-consultation`,
   so the page keeps working for search engines and cmd-click.
 

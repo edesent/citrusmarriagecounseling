@@ -96,7 +96,7 @@ export default function ConsultForm({ topic = "Marriage counseling" }: { topic?:
       </div>
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
       <div className="flex flex-wrap items-center gap-4">
-        <button type="submit" className="btn btn-lime" disabled={status === "sending"}>
+        <button type="submit" className="btn btn-gold" disabled={status === "sending"}>
           {status === "sending" ? "Sending…" : "Ask for a free consultation"}
         </button>
         <p className="text-sm text-muted">It goes straight to Pastor Brandon.</p>

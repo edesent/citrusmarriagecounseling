@@ -2,11 +2,10 @@
 
 /*
  * Colours and type follow Bethel Baptist Church's own site: black bars, cream
- * paper, gold lettering, DM Serif Display with a line of Allura script. Lime
- * is this ministry's own: the threefold cord and the call-to-action buttons.
- *   night   the black surfaces (header, hero, page heads, footer, dark buttons)
+ * paper, gold lettering, DM Serif Display with a line of Allura script.
+ *   night   the black surfaces (footer, counselor band, call-to-action band, phone menu)
  *   accent  Bethel's gold for lettering and lines: -deep reads on cream, -light on black
- *   lime    the cord itself and the call-to-action buttons
+ *   gold    the threefold cord and the call-to-action buttons: a brighter, metallic gold
  */
 :root {
   --paper: #fbf9f3;
@@ -17,14 +16,14 @@
   --night: #0f100f;
   --night-deep: #070807;
   --night-mid: #31352f;
-  --night-pale: #e9f2d8;
+  --night-pale: #e6e9e7;
   --accent: #a7821a;
   --accent-deep: #7f6210;
   --accent-light: #e8c86a;
   --accent-pale: #f6e8bf;
-  --lime: #9ccc3c;
-  --lime-light: #d6ec9e;
-  --lime-deep: #6c9f2a;
+  --gold: #c9a032;
+  --gold-light: #ecd48c;
+  --gold-deep: #94721a;
 }
 
 @theme inline {
@@ -41,9 +40,9 @@
   --color-accent-deep: var(--accent-deep);
   --color-accent-light: var(--accent-light);
   --color-accent-pale: var(--accent-pale);
-  --color-lime: var(--lime);
-  --color-lime-light: var(--lime-light);
-  --color-lime-deep: var(--lime-deep);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-deep: var(--gold-deep);
   /* Set by next/font/local variables in layout.tsx */
   --font-display: var(--font-dm-serif, ui-serif, Georgia, serif);
   --font-script: var(--font-allura, cursive);
@@ -136,14 +135,14 @@ body {
   .btn:active {
     transform: translateY(1px);
   }
-  /* The main call to action: lime, like the cord, with dark text (white on lime is too faint to read). */
-  .btn-lime {
-    background: var(--lime);
+  /* The main call to action: gold, like the cord, with dark text (white on this gold is too faint to read). */
+  .btn-gold {
+    background: var(--gold);
     color: var(--night-deep);
-    box-shadow: 0 14px 30px -16px rgba(108, 159, 42, 0.95);
+    box-shadow: 0 14px 30px -16px rgba(148, 114, 26, 0.95);
   }
-  .btn-lime:hover {
-    background: #b4dc5c;
+  .btn-gold:hover {
+    background: #d8b24a;
   }
   .btn-night {
     background: var(--night);

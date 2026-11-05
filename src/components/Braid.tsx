@@ -69,7 +69,7 @@ function Strands({ segs, width, gap }: { segs: Seg[]; width: number; gap: string
 export default function Braid({
   id,
   gap,
-  colors = ["var(--lime)", "var(--lime-light)", "var(--lime-deep)"],
+  colors = ["var(--gold)", "var(--gold-light)", "var(--gold-deep)"],
   height = 34,
   period = 132,
   width = 7,
@@ -109,7 +109,7 @@ export function Mark({ gap, className = "", colors }: { gap: string; className?:
     period,
     height: across,
     amplitude: 6.4,
-    colors: colors ?? ["var(--lime-deep)", "var(--night)", "var(--lime)"],
+    colors: colors ?? ["var(--gold-deep)", "var(--night)", "var(--gold)"],
     step: 1.5,
     from: 3,
     to: 3 + length,

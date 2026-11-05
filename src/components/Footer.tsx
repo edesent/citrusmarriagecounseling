@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="wrap grid gap-12 py-14 md:grid-cols-2 md:py-16 lg:grid-cols-[1.25fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5">
-            <Mark gap="var(--night-deep)" colors={["var(--lime)", "var(--lime-light)", "var(--lime-deep)"]} className="h-10 w-auto" />
+            <Mark gap="var(--night-deep)" colors={["var(--gold)", "var(--gold-light)", "var(--gold-deep)"]} className="h-10 w-auto" />
             <p className="display-soft text-xl">Citrus Marriage Counseling</p>
           </div>
           <p className="mt-3 text-white/75">
@@ -41,7 +41,7 @@ export default function Footer() {
               {phone.display}
             </a>
           </address>
-          <Link href="/free-consultation" className="btn btn-lime mt-6">
+          <Link href="/free-consultation" className="btn btn-gold mt-6">
             Book a free consultation
           </Link>
         </div>

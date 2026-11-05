@@ -97,7 +97,7 @@ export default function Home() {
               couples getting ready to marry. Your first consultation is free.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link href="/free-consultation" className="btn btn-lime text-base">
+              <Link href="/free-consultation" className="btn btn-gold text-base">
                 Book a free consultation
               </Link>
               <a href={`tel:${phone.tel}`} className="btn btn-line text-night">
@@ -148,7 +148,7 @@ export default function Home() {
           </h2>
           <dl className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
             {glance.map(([dt, dd]) => (
-              <div key={dt} className="border-l-2 border-lime pl-4">
+              <div key={dt} className="border-l-2 border-gold pl-4">
                 <dt className="text-sm font-bold uppercase tracking-wider text-muted">{dt}</dt>
                 <dd className="mt-1 text-ink/85">{dd}</dd>
               </div>
@@ -265,7 +265,7 @@ export default function Home() {
               three children.
             </p>
             <blockquote className="serif-italic mt-6 border-l-2 border-accent pl-5 text-2xl leading-snug text-accent-pale">“{pastor.heartLine}”</blockquote>
-            <Link href="/pastor-brandon-bankert" className="btn btn-lime mt-8">
+            <Link href="/pastor-brandon-bankert" className="btn btn-gold mt-8">
               About Pastor Brandon
             </Link>
           </div>

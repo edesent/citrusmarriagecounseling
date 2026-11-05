@@ -11,7 +11,7 @@ function Wordmark({ dark = false }: { dark?: boolean }) {
     <span className="flex items-center gap-2.5">
       <Mark
         gap={dark ? "var(--night-deep)" : "var(--paper)"}
-        colors={dark ? ["var(--lime)", "var(--lime-light)", "var(--lime-deep)"] : undefined}
+        colors={dark ? ["var(--gold)", "var(--gold-light)", "var(--gold-deep)"] : undefined}
         className="h-10 w-auto shrink-0 md:h-12"
       />
       <span className={`display-soft whitespace-nowrap text-[0.94rem] leading-none min-[390px]:text-[1.04rem] sm:text-[1.3rem] md:text-[1.45rem] ${dark ? "text-white" : "text-night-deep"}`}>
@@ -48,7 +48,7 @@ export default function Header() {
                 {n.label}
               </Link>
             ))}
-            <Link href="/free-consultation" className="btn btn-lime ml-2 whitespace-nowrap px-5 py-3 text-sm">
+            <Link href="/free-consultation" className="btn btn-gold ml-2 whitespace-nowrap px-5 py-3 text-sm">
               Free consultation
             </Link>
           </nav>
@@ -89,7 +89,7 @@ export default function Header() {
               {n.label}
             </Link>
           ))}
-          <Link href="/free-consultation" className="btn btn-lime mt-8" tabIndex={open ? 0 : -1}>
+          <Link href="/free-consultation" className="btn btn-gold mt-8" tabIndex={open ? 0 : -1}>
             Book a free consultation
           </Link>
           <a href={`tel:${phone.tel}`} className="mt-4 text-center font-semibold text-accent-light" tabIndex={open ? 0 : -1}>

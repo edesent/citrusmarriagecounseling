@@ -29,7 +29,7 @@ export default function ConsultCard() {
           </dd>
         </div>
       </dl>
-      <Link href="/free-consultation" className="btn btn-lime mt-6 w-full">
+      <Link href="/free-consultation" className="btn btn-gold mt-6 w-full">
         Book a free consultation
       </Link>
       <a href={`tel:${phone.tel}`} className="mt-3 block text-center font-semibold text-night">

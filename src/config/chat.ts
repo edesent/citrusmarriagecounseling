@@ -11,7 +11,7 @@
 export const CHAT = {
   origin: "https://slackwebsitechat.vercel.app",
   apiKey: "wbc_24059ab7fa7f5feab79c2d0134564d4456d49e6511a4c742",
-  accentColor: "#5f8f22",
+  accentColor: "#a7821a",
   brandColor: "#0f100f",
   /** Pastor Brandon's face, so visitors see they are writing to a person. */
   agentIcon: "/photos/pastor-brandon-bankert-headshot.jpg",
