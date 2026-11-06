@@ -75,11 +75,11 @@ export default function MarriageCounseling() {
               stop. Change happens at home, not in the office.
             </p>
 
-            <h2>Christian counseling, not licensed therapy</h2>
+            <h2>Certified marriage counseling grounded in Scripture</h2>
             <p>
-              This is Christian counseling from a pastor, under the oversight of Bethel Baptist Church. Pastor Brandon is not a licensed therapist,
-              and he will say so when something needs a doctor or a licensed professional, such as an addiction, a mental illness, or thoughts of
-              self-harm.
+              Pastor Brandon is a certified marriage counselor and provides Christian counseling under the oversight of Bethel Baptist Church.
+              Counseling can complement medical or specialized care when additional support is needed, including for addiction, mental illness,
+              or thoughts of self-harm.
             </p>
             <p>If there is abuse or danger in your home, couples counseling is not the right first step. Get safe first:</p>
             <ul>
