@@ -15,7 +15,7 @@ const marriageCost =
 export const faq = {
   therapy: {
     q: "Is this the same as therapy?",
-    a: "No. This is Christian counseling from a pastor, built on the Bible. Pastor Brandon is not a licensed therapist, and he will tell you plainly when something needs a doctor or a licensed professional instead.",
+    a: "This is Christian counseling grounded in the Bible. Pastor Brandon is a certified marriage counselor. Christian counseling can complement medical care or additional professional support when needed.",
   },
   members: {
     q: "Do we have to be members of Bethel, or Christians?",
