@@ -72,8 +72,8 @@ export default function FaithBased() {
 
             <h2>When you need more than a pastor</h2>
             <p>
-              Pastor Brandon is a pastor, not a licensed therapist or a doctor. He will tell you plainly when something needs medical care or a licensed
-              professional, and he can keep counseling you from Scripture alongside that care. If you are in danger or crisis right now:
+              Pastor Brandon is a certified marriage counselor. He will tell you plainly when something needs medical care or additional
+              professional support, and he can keep counseling you from Scripture alongside that care. If you are in danger or crisis right now:
             </p>
             <ul>
               {otherHelp.map((h) => (
