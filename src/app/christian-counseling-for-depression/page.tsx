@@ -71,8 +71,8 @@ export default function DepressionCounseling() {
 
             <h2>Alongside your doctor, not instead of it</h2>
             <p>
-              Keep seeing your doctor and keep any treatment they have given you. Pastor Brandon is a pastor, not a licensed therapist or a doctor; he
-              works alongside medical care and will tell you plainly when you need more than he can give.
+              Keep seeing your doctor and keep any treatment they have given you. Pastor Brandon is a certified marriage counselor who works
+              alongside medical care and will tell you plainly when additional care is needed.
             </p>
             <p>
               <strong>If you are thinking about ending your life, please reach out now.</strong>
