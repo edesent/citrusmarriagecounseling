@@ -72,8 +72,8 @@ export default function AddictionCounseling() {
             <h2>Alongside medical care, not instead of it</h2>
             <p>
               Stopping alcohol or some drugs suddenly can be dangerous. If you are physically dependent, see a doctor or a treatment program first,
-              and keep counseling alongside it. Pastor Brandon is a pastor, not a licensed therapist or a doctor, and he will tell you plainly when
-              you need more than he can give.
+              and keep counseling alongside it. Pastor Brandon is a certified marriage counselor and will be straightforward when additional
+              medical or specialized care is needed.
             </p>
             <ul>
               {otherHelp.map((h) => (
