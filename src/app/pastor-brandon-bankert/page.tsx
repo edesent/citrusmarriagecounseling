@@ -140,12 +140,11 @@ export default function About() {
           <div className="text-lg text-ink/85">
             <p>
               Citrus Marriage Counseling is a ministry of {church.name}, an independent Baptist church in Hernando since {church.founded}. Pastor
-              Brandon counsels under the oversight of the church and is accountable to it. That is what makes this Christian counseling from a pastor,
-              not licensed therapy.
+              Brandon counsels under the oversight of the church and is accountable to it. Pastor Brandon is a certified marriage counselor and
+              provides Christian counseling grounded in Scripture.
             </p>
             <p className="mt-4">
-              You never have to visit or join Bethel to be counseled. If you would like to, Sunday School is at 10:00 and the morning service at 11:00,
-              with lunch together afterward.
+              Counseling is available to individuals and couples whether or not they attend Bethel Baptist Church.
             </p>
             <a href={church.url} className="btn btn-line mt-6 text-night" rel="noopener">
               Visit {church.name}’s website
