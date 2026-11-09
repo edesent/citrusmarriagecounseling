@@ -39,7 +39,10 @@ export default function Header() {
             <Wordmark />
           </Link>
           <nav className="hidden items-center gap-1 xl:flex" aria-label="Main">
-            {nav.map((n) => (
+            <Link href="/" className={`whitespace-nowrap rounded-full px-2.5 py-2 text-[0.92rem] font-semibold transition hover:bg-night/6 ${path === "/" ? "text-accent-deep" : "text-ink"}`}>
+              Home
+            </Link>
+            {nav.filter((n) => n.href !== "/").map((n) => (
               <Link
                 key={n.href}
                 href={n.href}
