@@ -80,6 +80,7 @@ export const otherHelp = [
 ];
 
 export const nav = [
+  { href: "/", label: "Home" },
   { href: "/christian-marriage-counseling", label: "Marriage" },
   { href: "/premarital-counseling", label: "Premarital" },
   { href: "/christian-addiction-counseling", label: "Addiction" },
