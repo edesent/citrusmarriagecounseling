@@ -87,7 +87,7 @@ export default function Header() {
           </button>
         </div>
         <nav className="wrap flex flex-1 flex-col justify-start gap-0.5 overflow-y-auto py-6 [@media(min-height:720px)]:justify-center" aria-label="Main">
-          {[{ href: "/", label: "Home" }, ...nav].map((n) => (
+          {nav.map((n) => (
             <Link key={n.href} href={n.href} className="display border-b border-white/12 py-2.5 text-[1.75rem] min-[400px]:py-3 min-[400px]:text-[2rem]" tabIndex={open ? 0 : -1}>
               {n.label}
             </Link>
