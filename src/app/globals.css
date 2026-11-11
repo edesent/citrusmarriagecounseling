@@ -223,6 +223,15 @@ body {
   }
 }
 
+/* Phone menu open (Header.tsx sets data-menu): no page scroll behind it, and the chat bubble and its
+   greeting, which sat on top of the menu, stay out of the way. */
+html[data-menu="open"] {
+  overflow: hidden;
+}
+html[data-menu="open"] :is(#wbc-chat-bubble, #wbc-chat-dismiss, #wbc-greeting-popup, #wbc-chat-window) {
+  visibility: hidden !important;
+}
+
 /* The free-consultation popup (ConsultPopup.tsx). */
 .consult-dialog::backdrop {
   background: rgb(7 8 7 / 0.72);

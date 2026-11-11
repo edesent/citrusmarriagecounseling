@@ -27,7 +27,30 @@ export default function Header() {
 
   useEffect(() => setOpen(false), [path]);
   useEffect(() => {
-    document.documentElement.style.overflow = open ? "hidden" : "";
+    // globals.css locks the page scroll and hides the chat bubble on this
+    // attribute. Not an inline overflow style: the consultation popup sets that
+    // one, and the menu closing as the popup opens would clear the popup's lock.
+    const html = document.documentElement;
+    if (open) html.dataset.menu = "open";
+    else delete html.dataset.menu;
+  }, [open]);
+
+  // Any tap on a link in the phone menu closes it. Closing on a path change
+  // alone misses Home on the home page (the path doesn't change, so the menu
+  // stayed open and Home looked dead) and the consultation link, whose popup
+  // swallows the click. Listening on the document in the capture phase still
+  // runs when the popup stops the click there.
+  useEffect(() => {
+    if (!open) return;
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as Element | null)?.closest?.("#phone-menu a");
+      if (!(a instanceof HTMLAnchorElement)) return;
+      setOpen(false);
+      const url = new URL(a.href, location.href);
+      if (url.origin === location.origin && url.pathname === location.pathname && !url.hash) window.scrollTo({ top: 0 });
+    };
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
   }, [open]);
 
   return (

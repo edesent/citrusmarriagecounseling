@@ -10,6 +10,10 @@ import { CHAT } from "@/config/chat";
  * own greeting from Pastor Brandon a few seconds after the page loads; a
  * visitor who writes gets an answer from his phone. If the widget script ever
  * fails to load, a plain button points at the consultation page instead.
+ *
+ * Closing the bubble hides it until the next visit (data-dismiss-until-reload).
+ * Don't use data-dismiss-days="0" for that: the widget reads 0 as "not set" and
+ * hides it for 7 days.
  */
 export default function ChatPrompt() {
   const [failed, setFailed] = useState(false);
@@ -26,7 +30,7 @@ export default function ChatPrompt() {
         data-agent-icon={CHAT.agentIcon}
         data-greeting={CHAT.greeting}
         data-form-subtitle={CHAT.formSubtitle}
-        data-dismiss-days="0"
+        data-dismiss-until-reload="true"
         strategy="afterInteractive"
         onError={() => setFailed(true)}
       />
