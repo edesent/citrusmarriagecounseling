@@ -223,6 +223,14 @@ body {
   }
 }
 
+/* "Back to Bethel" bar (BethelBar.tsx): only for visitors who came from Bethel's site. */
+.bethel-bar {
+  display: none;
+}
+html[data-bethel] .bethel-bar {
+  display: block;
+}
+
 /* Phone menu open (Header.tsx sets data-menu): no page scroll behind it, and the chat bubble and its
    greeting, which sat on top of the menu, stay out of the way. */
 html[data-menu="open"] {

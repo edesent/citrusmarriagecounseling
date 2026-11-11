@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
+import BethelBar from "@/components/BethelBar";
 import ChatPrompt from "@/components/ChatPrompt";
 import ConsultPopup from "@/components/ConsultPopup";
 import Footer from "@/components/Footer";
@@ -63,8 +64,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-US" className={`${dmSerif.variable} ${allura.variable} ${figtree.variable}`}>
+    // suppressHydrationWarning: BethelBar's inline script may add data-bethel to <html> before React hydrates.
+    <html lang="en-US" className={`${dmSerif.variable} ${allura.variable} ${figtree.variable}`} suppressHydrationWarning>
       <body>
+        <BethelBar />
         <Header />
         <main>{children}</main>
         <Footer />
