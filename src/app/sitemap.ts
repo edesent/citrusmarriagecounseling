@@ -12,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/christian-addiction-counseling", 0.8],
     ["/christian-counseling-for-depression", 0.8],
     ["/faith-based-counseling", 0.8],
-    ["/virtual-counseling", 0.8],
     ["/pastor-brandon-bankert", 0.7],
     ["/free-consultation", 0.7],
     ["/areas", 0.7],
