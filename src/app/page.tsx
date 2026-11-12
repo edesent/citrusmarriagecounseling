@@ -140,6 +140,24 @@ export default function Home() {
         <Braid id="braid-home-hero" gap="var(--cream)" className="block" />
       </section>
 
+      {/* Virtual counseling option on the homepage. */}
+      <section className="bg-paper">
+        <div className="wrap py-10 md:py-14">
+          <div className="grid items-center gap-6 rounded-[1.75rem] border border-ink/10 bg-cream p-6 md:grid-cols-[1fr_auto] md:p-8">
+            <div>
+              <p className="eyebrow text-accent-deep">A convenient option</p>
+              <h2 className="display-soft mt-2 text-3xl md:text-4xl">Ask about virtual counseling.</h2>
+              <p className="mt-3 max-w-3xl text-lg text-ink/75">
+                Prefer to meet from home? Ask Pastor Brandon whether a virtual video meeting is available and appropriate for your location and situation. Start with a free conversation to discuss the details.
+              </p>
+            </div>
+            <Link href="/free-consultation" className="btn btn-gold whitespace-nowrap">
+              Ask about virtual counseling
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* At a glance: plain facts, written to be quoted by search engines and AI answers. */}
       <section className="border-b border-ink/8 bg-paper" aria-labelledby="glance">
         <div className="wrap py-12 md:py-14">
