@@ -62,7 +62,7 @@ function rateLimited(key: string, max = 6) {
 const fake = () => NextResponse.json({ ok: true });
 
 type Body = Record<string, unknown>;
-type Built = { text: string; subject: string; name: string; contact: string } | { error: string } | { spam: true };
+type Built = { text: string; plain: string; subject: string; name: string; contact: string; email: string } | { error: string } | { spam: true };
 
 const TOPICS = ["Marriage counseling", "Premarital counseling", "Addiction recovery", "Depression or anxiety", "Faith-based counseling for me", "Not sure yet"];
 const TIMES = ["Mornings", "Afternoons", "Evenings", "Any time"];
@@ -89,24 +89,54 @@ function consultationMessage(b: Body): Built {
   if ([name, partner, note].some(hasLink)) return { spam: true };
   if (note && !looksLikeAMessage(note, 4)) return { spam: true };
 
+  const rows: [string, string][] = [["Name", name]];
+  if (partner) rows.push(["Spouse / fiancé(e)", partner]);
+  if (phone) rows.push(["Phone", phone]);
+  if (email) rows.push(["Email", email]);
+  rows.push(["Looking for", topic]);
+  if (when) rows.push(["Best time", when]);
+
   return {
     subject: `💍 Free consultation request: ${topic}`,
     name,
+    email,
     contact: [phone, email].filter(Boolean).join(" · "),
-    text: [
-      "*💍 Free consultation request — Citrus Marriage Counseling website*",
-      `*Name:* ${name}`,
-      partner && `*Spouse / fiancé(e):* ${partner}`,
-      phone && `*Phone:* ${phone}`,
-      email && `*Email:* ${email}`,
-      `*Looking for:* ${topic}`,
-      when && `*Best time:* ${when}`,
-      page && `_Sent from ${page}_`,
-    ]
+    // Slack formatting.
+    text: ["*💍 Free consultation request — Citrus Marriage Counseling website*", ...rows.map(([k, v]) => `*${k}:* ${v}`), page && `_Sent from ${page}_`]
       .filter(Boolean)
       .concat(note ? ["", note] : [])
       .join("\n"),
+    // The same request as a plain email.
+    plain: ["Free consultation request from the Citrus Marriage Counseling website", "", ...rows.map(([k, v]) => `${k}: ${v}`)]
+      .concat(note ? ["", note] : [])
+      .concat(page ? ["", `Sent from ${page}`] : [])
+      .join("\n"),
   };
+}
+
+/**
+ * Emails the request to Pastor Brandon (FORM_EMAIL_TO, comma-separated, to
+ * change who gets it). Sent through the team's Resend key from dfd.llc, the
+ * only domain that key may send from. Reply goes to the visitor when they
+ * left an email address.
+ */
+async function emailRequest(built: { subject: string; plain: string; name: string; email: string }) {
+  const key = process.env.FORM_RESEND_API_KEY ?? process.env.RESEND_API_KEY;
+  const to = (process.env.FORM_EMAIL_TO ?? "bethelbaptist2289@gmail.com").split(",").map((s) => s.trim()).filter(Boolean);
+  if (!key || !to.length) return false;
+  const r = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
+    body: JSON.stringify({
+      from: process.env.FORM_FROM_EMAIL ?? "Citrus Marriage Counseling website <noreply@dfd.llc>",
+      to,
+      ...(built.email ? { reply_to: built.email } : {}),
+      subject: `${built.subject.replace(/^\S+\s/, "")} (${built.name})`,
+      text: built.plain,
+    }),
+  }).catch(() => null);
+  if (!r?.ok) console.error("form email", r?.status, await r?.text().catch(() => ""));
+  return !!r?.ok;
 }
 
 export async function POST(request: Request) {
@@ -140,7 +170,8 @@ export async function POST(request: Request) {
   );
   const failed = NextResponse.json({ error: "That didn’t send just now. Please call (352) 860-0804 instead." }, { status: 502 });
 
-  try {
+  // Slack and email go out together; the request counts as sent if either arrives.
+  const slack = (async () => {
     const res = webhook
       ? await fetch(webhook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text: built.text }) })
       : await fetch(`${CHAT.origin}/api/chat/contact-form`, {
@@ -148,10 +179,11 @@ export async function POST(request: Request) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ apiKey: CHAT.apiKey, subject: built.subject, name: built.name, contact: built.contact, message: built.text }),
         });
-    if (res.status === 503) return notConnected;
-    if (!res.ok) throw new Error(String(res.status));
-  } catch {
-    return failed;
-  }
+    if (!res.ok) console.error("form slack", res.status);
+    return res.status;
+  })().catch(() => 0);
+  const [slackStatus, emailed] = await Promise.all([slack, emailRequest(built)]);
+  const slackOk = slackStatus >= 200 && slackStatus < 300;
+  if (!slackOk && !emailed) return slackStatus === 503 ? notConnected : failed;
   return NextResponse.json({ ok: true });
 }

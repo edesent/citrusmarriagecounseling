@@ -7,6 +7,7 @@ import ConsultPopup from "@/components/ConsultPopup";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import JsonLd from "@/components/JsonLd";
+import MetaPixel from "@/components/MetaPixel";
 import { siteGraph } from "@/lib/schema";
 import { practice, siteUrl } from "@/lib/site";
 import "./globals.css";
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ConsultPopup />
         <ChatPrompt />
         <Analytics />
+        <MetaPixel />
         <JsonLd data={siteGraph()} />
       </body>
     </html>

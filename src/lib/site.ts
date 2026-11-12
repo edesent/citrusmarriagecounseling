@@ -89,3 +89,9 @@ export const nav = [
   { href: "/pastor-brandon-bankert", label: "Pastor Brandon" },
   { href: "/areas", label: "Areas" },
 ];
+
+/**
+ * Meta (Facebook) Pixel ID for the ads, from Events Manager. Not a secret.
+ * Empty = no pixel loads. See src/components/MetaPixel.tsx.
+ */
+export const metaPixelId = "";

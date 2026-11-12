@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { trackLead } from "@/components/MetaPixel";
 
 export type FormKind = "consultation";
 
@@ -34,6 +35,7 @@ export function useForm(kind: FormKind) {
           return false;
         }
         setStatus("sent");
+        trackLead();
         return true;
       } catch {
         setError("We couldn’t reach the server. Please call (352) 860-0804.");
