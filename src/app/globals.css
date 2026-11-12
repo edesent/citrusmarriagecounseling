@@ -24,6 +24,17 @@
   --gold: #c9a032;
   --gold-light: #ecd48c;
   --gold-deep: #94721a;
+
+  /* /stats page (church-tools/site-analytics) */
+  --ct-accent: var(--accent);
+  --ct-accent-deep: var(--accent-deep);
+  --ct-heading: var(--ink);
+  --ct-ink: var(--ink);
+  --ct-muted: var(--muted);
+  --ct-line: var(--cream-deep);
+  --ct-paper: #fff;
+  --ct-serif: var(--font-dm-serif), Georgia, serif;
+  --ct-sans: var(--font-figtree), system-ui, sans-serif;
 }
 
 @theme inline {
