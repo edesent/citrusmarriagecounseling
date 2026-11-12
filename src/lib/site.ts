@@ -86,6 +86,7 @@ export const nav = [
   { href: "/christian-addiction-counseling", label: "Addiction" },
   { href: "/christian-counseling-for-depression", label: "Depression" },
   { href: "/faith-based-counseling", label: "Faith-based" },
+  { href: "/virtual-counseling", label: "Virtual" },
   { href: "/pastor-brandon-bankert", label: "Pastor Brandon" },
   { href: "/areas", label: "Areas" },
 ];
