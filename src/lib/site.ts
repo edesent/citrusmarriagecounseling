@@ -94,4 +94,4 @@ export const nav = [
  * Meta (Facebook) Pixel ID for the ads, from Events Manager. Not a secret.
  * Empty = no pixel loads. See src/components/MetaPixel.tsx.
  */
-export const metaPixelId = "";
+export const metaPixelId = "2643801916093245";
