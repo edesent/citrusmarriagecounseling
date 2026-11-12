@@ -142,16 +142,34 @@ export default function Home() {
 
       {/* Virtual counseling option on the homepage. */}
       <section className="bg-paper">
-        <div className="wrap py-10 md:py-14">
-          <div className="grid items-center gap-6 rounded-[1.75rem] border border-ink/10 bg-cream p-6 md:grid-cols-[1fr_auto] md:p-8">
-            <div>
+        <div className="wrap py-12 md:py-16">
+          <div className="rounded-[1.75rem] border border-ink/10 bg-cream p-6 md:p-9">
+            <div className="max-w-3xl">
               <p className="eyebrow text-accent-deep">A convenient option</p>
-              <h2 className="display-soft mt-2 text-3xl md:text-4xl">Ask about virtual counseling.</h2>
-              <p className="mt-3 max-w-3xl text-lg text-ink/75">
-                Prefer to meet from home? Ask Pastor Brandon whether a virtual video meeting is available and appropriate for your location and situation. Start with a free conversation to discuss the details.
+              <h2 className="display-soft mt-2 text-3xl md:text-4xl">Biblical counseling, from the comfort of home.</h2>
+              <p className="mt-3 text-lg text-ink/75">
+                If traveling to the office is difficult or your schedule is full, online video counseling may offer another way to meet. Ask Pastor Brandon whether virtual sessions are available and appropriate for your location and situation.
               </p>
             </div>
-            <Link href="/free-consultation" className="btn btn-gold whitespace-nowrap">
+            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                ["Convenient and flexible", "Discuss meeting times that work around your family, work and other responsibilities."],
+                ["No commute", "Save the drive, travel time and transportation arrangements by meeting from a private place that works for you."],
+                ["Comfort of a familiar setting", "Some people find it easier to begin a difficult conversation from a quiet, familiar space."],
+                ["More accessible", "A virtual option may help when distance, mobility or a busy schedule makes an in-person visit difficult."],
+                ["The same Scripture-centered focus", "The goal remains practical, caring counsel grounded in the Bible—not simply a video call."],
+                ["Stay connected", "When appropriate and available, video meetings can make it easier to keep appointments even when getting to the office is challenging."],
+              ].map(([heading, detail]) => (
+                <div key={heading} className="border-l-2 border-gold pl-4">
+                  <h3 className="display-soft text-xl">{heading}</h3>
+                  <p className="mt-1 text-ink/75">{detail}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-7 max-w-4xl text-sm leading-relaxed text-muted">
+              Virtual counseling is not the right fit for every concern or every location. Availability, privacy and suitability will be discussed during your free initial consultation. Choose a private space and a reliable internet connection for any online meeting.
+            </p>
+            <Link href="/free-consultation" className="btn btn-gold mt-6">
               Ask about virtual counseling
             </Link>
           </div>
