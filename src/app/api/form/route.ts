@@ -1,6 +1,7 @@
 import { createHmac, timingSafeEqual } from "crypto";
-import { NextResponse } from "next/server";
+import { after, NextResponse } from "next/server";
 import { CHAT } from "@/config/chat";
+import { metaRequestContext, sendMetaLead } from "@/lib/meta-capi";
 import { block, hasLink, hasTwoNames, hasUnexpectedFields, isCallablePhone, isDuplicate, isEmail, line, looksLikeAMessage, looksLikeAName } from "@/lib/spam";
 
 /**
@@ -62,13 +63,13 @@ function rateLimited(key: string, max = 6) {
 const fake = () => NextResponse.json({ ok: true });
 
 type Body = Record<string, unknown>;
-type Built = { text: string; plain: string; subject: string; name: string; contact: string; email: string } | { error: string } | { spam: true };
+type Built = { text: string; plain: string; subject: string; name: string; contact: string; email: string; phone: string } | { error: string } | { spam: true };
 
 const TOPICS = ["Marriage counseling", "Premarital counseling", "Addiction recovery", "Depression or anxiety", "Faith-based counseling for me", "Not sure yet"];
 const TIMES = ["Mornings", "Afternoons", "Evenings", "Any time"];
 
 function consultationMessage(b: Body): Built {
-  if (hasUnexpectedFields(b, ["kind", "token", "website", "company", "name", "partner", "phone", "email", "topic", "when", "note", "page"]))
+  if (hasUnexpectedFields(b, ["kind", "token", "website", "company", "name", "partner", "phone", "email", "topic", "when", "note", "page", "eventId"]))
     return { spam: true };
   const name = line(b.name, 80);
   const partner = line(b.partner, 80);
@@ -100,6 +101,7 @@ function consultationMessage(b: Body): Built {
     subject: `💍 Free consultation request: ${topic}`,
     name,
     email,
+    phone,
     contact: [phone, email].filter(Boolean).join(" · "),
     // Slack formatting.
     text: ["*💍 Free consultation request — Citrus Marriage Counseling website*", ...rows.map(([k, v]) => `*${k}:* ${v}`), page && `_Sent from ${page}_`]
@@ -185,5 +187,12 @@ export async function POST(request: Request) {
   const [slackStatus, emailed] = await Promise.all([slack, emailRequest(built)]);
   const slackOk = slackStatus >= 200 && slackStatus < 300;
   if (!slackOk && !emailed) return slackStatus === 503 ? notConnected : failed;
+
+  // Tell Facebook a request came in (server-side twin of the browser's Lead).
+  const eventId = typeof body.eventId === "string" && /^[\w-]{8,64}$/.test(body.eventId) ? body.eventId : "";
+  if (eventId) {
+    const ctx = metaRequestContext(request);
+    after(() => sendMetaLead(ctx, eventId, { email: built.email, phone: built.phone, name: built.name }));
+  }
   return NextResponse.json({ ok: true });
 }

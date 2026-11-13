@@ -12,8 +12,8 @@ declare global {
 }
 
 /** Tells Facebook a free-consultation request was sent. Called by useForm on success. */
-export function trackLead() {
-  if (metaPixelId && typeof window !== "undefined") window.fbq?.("track", "Lead");
+export function trackLead(eventId: string) {
+  if (metaPixelId && typeof window !== "undefined") window.fbq?.("track", "Lead", {}, { eventID: eventId });
 }
 
 /**
