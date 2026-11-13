@@ -104,12 +104,18 @@ export default function Home() {
                 Call <span className="num">{phone.display}</span>
               </a>
             </div>
-            <p className="mt-4 text-sm text-ink/70">
-              Prefer meeting online?{" "}
-              <a href="#virtual-counseling" className="link font-semibold">
-                Ask about virtual counseling
-              </a>
-            </p>
+            <div className="mt-6 max-w-xl rounded-2xl border-2 border-accent bg-white p-4 shadow-md sm:p-5">
+              <p className="eyebrow text-accent-deep">Online counseling available by inquiry</p>
+              <div className="mt-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <h2 className="display-soft text-2xl text-night">Prefer counseling from home?</h2>
+                  <p className="mt-1 text-sm text-ink/75">Ask about virtual counseling with Pastor Brandon.</p>
+                </div>
+                <a href="#virtual-counseling" className="btn btn-gold shrink-0 text-center">
+                  Explore virtual counseling
+                </a>
+              </div>
+            </div>
             <p className="mt-6 text-ink/70">
               Premarital counseling <span className="num font-semibold text-ink">{money(pricing.premaritalSession)}</span> a session
             </p>
