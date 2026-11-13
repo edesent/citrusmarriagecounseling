@@ -16,6 +16,9 @@ export const topics = [
   "Not sure yet",
 ] as const;
 
+/** Days a person can tick for the free consultation. Sunday is church. */
+export const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] as const;
+
 /** The free-consultation request. Lands in Pastor Brandon's Slack through /api/form. */
 export default function ConsultForm({ topic = "Marriage counseling" }: { topic?: (typeof topics)[number] }) {
   const { submit, status, error } = useForm("consultation");
@@ -33,7 +36,9 @@ export default function ConsultForm({ topic = "Marriage counseling" }: { topic?:
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        submit({ ...Object.fromEntries(new FormData(e.currentTarget).entries()), page });
+        const data = new FormData(e.currentTarget);
+        // Several days can be ticked; they travel as one comma-separated field.
+        submit({ ...Object.fromEntries(data.entries()), days: data.getAll("days").join(", "), page });
       }}
       className="space-y-4"
     >
@@ -88,6 +93,22 @@ export default function ConsultForm({ topic = "Marriage counseling" }: { topic?:
           </select>
         </div>
       </div>
+      <fieldset>
+        <legend className={label}>
+          Which days work for you? <span className="font-normal text-muted">(pick any that do)</span>
+        </legend>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {days.map((d) => (
+            <label
+              key={d}
+              className="cursor-pointer select-none rounded-full border border-ink/15 bg-white px-4 py-2 text-sm font-semibold text-ink/80 transition has-[:checked]:border-accent-deep has-[:checked]:bg-accent-deep has-[:checked]:text-white has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent/40"
+            >
+              <input type="checkbox" name="days" value={d} className="sr-only" />
+              {d}
+            </label>
+          ))}
+        </div>
+      </fieldset>
       <div>
         <label className={label} htmlFor="f-note">
           Anything you want him to know first? <span className="font-normal text-muted">(optional)</span>

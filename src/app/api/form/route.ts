@@ -66,10 +66,11 @@ type Body = Record<string, unknown>;
 type Built = { text: string; plain: string; subject: string; name: string; contact: string; email: string; phone: string } | { error: string } | { spam: true };
 
 const TOPICS = ["Marriage counseling", "Premarital counseling", "Addiction recovery", "Depression or anxiety", "Faith-based counseling for me", "Not sure yet"];
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const TIMES = ["Mornings", "Afternoons", "Evenings", "Any time"];
 
 function consultationMessage(b: Body): Built {
-  if (hasUnexpectedFields(b, ["kind", "token", "website", "company", "name", "partner", "phone", "email", "topic", "when", "note", "page", "eventId"]))
+  if (hasUnexpectedFields(b, ["kind", "token", "website", "company", "name", "partner", "phone", "email", "topic", "when", "days", "note", "page", "eventId"]))
     return { spam: true };
   const name = line(b.name, 80);
   const partner = line(b.partner, 80);
@@ -77,6 +78,8 @@ function consultationMessage(b: Body): Built {
   const email = line(b.email, 120);
   const topic = TOPICS.includes(line(b.topic, 60)) ? line(b.topic, 60) : "Not sure yet";
   const when = TIMES.includes(line(b.when, 30)) ? line(b.when, 30) : "";
+  const picked = line(b.days, 120).split(",").map((d) => d.trim());
+  const days = DAYS.filter((d) => picked.includes(d)).join(", ");
   const note = block(b.note, 2000);
   const page = line(b.page, 120);
 
@@ -95,6 +98,7 @@ function consultationMessage(b: Body): Built {
   if (phone) rows.push(["Phone", phone]);
   if (email) rows.push(["Email", email]);
   rows.push(["Looking for", topic]);
+  if (days) rows.push(["Days that work", days.split(", ").length === DAYS.length ? "Any day, Monday to Saturday" : days]);
   if (when) rows.push(["Best time", when]);
 
   return {
