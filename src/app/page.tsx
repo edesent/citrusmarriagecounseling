@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* Virtual counseling option on the homepage. */}
-      <section className="bg-paper">
+      <section id="virtual-counseling" className="bg-paper">
         <div className="wrap py-12 md:py-16">
           <div className="rounded-[1.75rem] border border-ink/10 bg-cream p-6 md:p-9">
             <div className="max-w-3xl">
