@@ -104,6 +104,12 @@ export default function Home() {
                 Call <span className="num">{phone.display}</span>
               </a>
             </div>
+            <p className="mt-4 text-sm text-ink/70">
+              Prefer meeting online?{" "}
+              <a href="#virtual-counseling" className="link font-semibold">
+                Ask about virtual counseling
+              </a>
+            </p>
             <p className="mt-6 text-ink/70">
               Premarital counseling <span className="num font-semibold text-ink">{money(pricing.premaritalSession)}</span> a session
             </p>
