@@ -1,11 +1,8 @@
 @import "tailwindcss";
 
 /*
- * Colours and type follow Bethel Baptist Church's own site: black bars, cream
- * paper, gold lettering, DM Serif Display with a line of Allura script.
- *   night   the black surfaces (footer, counselor band, call-to-action band, phone menu)
- *   accent  Bethel's gold for lettering and lines: -deep reads on cream, -light on black
- *   gold    the threefold cord and the call-to-action buttons: a brighter, metallic gold
+ * Citrus Marriage Counseling color system: cream, black and restrained gold.
+ * All green surfaces, borders and accents have been removed in favor of black.
  */
 :root {
   --paper: #fbf9f3;
@@ -15,12 +12,12 @@
   --muted: #595e57;
   --night: #0f100f;
   --night-deep: #070807;
-  --night-mid: #31352f;
+  --night-mid: #242424;
   --night-pale: #e6e9e7;
-  --accent: #a7821a;
-  --accent-deep: #7f6210;
-  --accent-light: #e8c86a;
-  --accent-pale: #f6e8bf;
+  --accent: #151515;
+  --accent-deep: #000000;
+  --accent-light: #d6d0c2;
+  --accent-pale: #e9e5dc;
   --gold: #c9a032;
   --gold-light: #ecd48c;
   --gold-deep: #94721a;
@@ -54,14 +51,12 @@
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-gold-deep: var(--gold-deep);
-  /* Set by next/font/local variables in layout.tsx */
   --font-display: var(--font-dm-serif, ui-serif, Georgia, serif);
   --font-script: var(--font-allura, cursive);
   --font-sans: var(--font-figtree, ui-sans-serif, system-ui, sans-serif);
 }
 
 html {
-  /* Do not set scroll-behavior: smooth here; it blanks full-page screenshots. */
   -webkit-text-size-adjust: 100%;
 }
 
@@ -78,7 +73,6 @@ body {
   color: var(--night-deep);
 }
 
-/* Custom classes must live in @layer components or Tailwind utilities can't override them. */
 @layer components {
   .wrap {
     width: 100%;
@@ -87,12 +81,9 @@ body {
     padding-inline: 1rem;
   }
   @media (min-width: 40rem) {
-    .wrap {
-      padding-inline: 2rem;
-    }
+    .wrap { padding-inline: 2rem; }
   }
 
-  /* DM Serif Display, as on Bethel's site: heavy, high-contrast, set big and tight. */
   .display {
     font-family: var(--font-display);
     font-weight: 400;
@@ -110,14 +101,12 @@ body {
     font-style: italic;
     font-weight: 400;
   }
-  /* Allura, Bethel's script, for one line at a time in gold. */
   .script {
     font-family: var(--font-script);
     font-weight: 400;
     line-height: 1.05;
     letter-spacing: 0;
   }
-  /* Thin, wide capitals in gold, Bethel's eyebrow. */
   .eyebrow {
     font-family: var(--font-sans);
     font-weight: 500;
@@ -125,7 +114,6 @@ body {
     letter-spacing: 0.28em;
     text-transform: uppercase;
   }
-  /* Prices, times and distances always in the sans, with even figures. */
   .num {
     font-family: var(--font-sans);
     font-variant-numeric: tabular-nums lining-nums;
@@ -143,31 +131,17 @@ body {
     text-align: center;
     transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
   }
-  .btn:active {
-    transform: translateY(1px);
-  }
-  /* The main call to action: gold, like the cord, with dark text (white on this gold is too faint to read). */
+  .btn:active { transform: translateY(1px); }
   .btn-gold {
     background: var(--gold);
     color: var(--night-deep);
     box-shadow: 0 14px 30px -16px rgba(148, 114, 26, 0.95);
   }
-  .btn-gold:hover {
-    background: #d8b24a;
-  }
-  .btn-night {
-    background: var(--night);
-    color: #fff;
-  }
-  .btn-night:hover {
-    background: var(--night-deep);
-  }
-  .btn-line {
-    border: 1.5px solid currentColor;
-  }
-  .btn-line:hover {
-    background: color-mix(in srgb, currentColor 8%, transparent);
-  }
+  .btn-gold:hover { background: #d8b24a; }
+  .btn-night { background: var(--night); color: #fff; }
+  .btn-night:hover { background: var(--night-deep); }
+  .btn-line { border: 1.5px solid currentColor; }
+  .btn-line:hover { background: color-mix(in srgb, currentColor 8%, transparent); }
 
   .link {
     text-decoration: underline;
@@ -175,14 +149,9 @@ body {
     text-underline-offset: 0.22em;
     text-decoration-thickness: 1.5px;
   }
-  .link:hover {
-    text-decoration-color: var(--accent);
-  }
+  .link:hover { text-decoration-color: var(--accent); }
 
-  /* Long-form copy on the service and area pages. */
-  .copy > * + * {
-    margin-top: 1.05em;
-  }
+  .copy > * + * { margin-top: 1.05em; }
   .copy h2 {
     font-family: var(--font-display);
     font-weight: 400;
@@ -196,17 +165,9 @@ body {
     font-size: 1.08rem;
     margin-top: 1.6em;
   }
-  .copy ul {
-    padding-left: 1.1rem;
-    list-style: none;
-  }
-  .copy ul > li {
-    position: relative;
-    padding-left: 0.4rem;
-  }
-  .copy ul > li + li {
-    margin-top: 0.45em;
-  }
+  .copy ul { padding-left: 1.1rem; list-style: none; }
+  .copy ul > li { position: relative; padding-left: 0.4rem; }
+  .copy ul > li + li { margin-top: 0.45em; }
   .copy ul > li::before {
     content: "";
     position: absolute;
@@ -221,37 +182,19 @@ body {
     text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
     text-underline-offset: 0.22em;
   }
-
-  .faq summary {
-    list-style: none;
-    cursor: pointer;
-  }
-  .faq summary::-webkit-details-marker {
-    display: none;
-  }
-  .faq details[open] .faq-plus {
-    transform: rotate(45deg);
-  }
+  .faq summary { list-style: none; cursor: pointer; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq details[open] .faq-plus { transform: rotate(45deg); }
 }
 
-/* "Back to Bethel" bar (BethelBar.tsx): only for visitors who came from Bethel's site. */
-.bethel-bar {
-  display: none;
-}
-html[data-bethel] .bethel-bar {
-  display: block;
-}
+.bethel-bar { display: none; }
+html[data-bethel] .bethel-bar { display: block; }
 
-/* Phone menu open (Header.tsx sets data-menu): no page scroll behind it, and the chat bubble and its
-   greeting, which sat on top of the menu, stay out of the way. */
-html[data-menu="open"] {
-  overflow: hidden;
-}
+html[data-menu="open"] { overflow: hidden; }
 html[data-menu="open"] :is(#wbc-chat-bubble, #wbc-chat-dismiss, #wbc-greeting-popup, #wbc-chat-window) {
   visibility: hidden !important;
 }
 
-/* The free-consultation popup (ConsultPopup.tsx). */
 .consult-dialog::backdrop {
   background: rgb(7 8 7 / 0.72);
   backdrop-filter: blur(3px);
