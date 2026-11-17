@@ -109,7 +109,7 @@ export function Mark({ gap, className = "", colors }: { gap: string; className?:
     period,
     height: across,
     amplitude: 6.4,
-    colors: colors ?? ["var(--gold-deep)", "var(--night)", "var(--gold)"],
+    colors: colors ?? ["var(--night)", "var(--night)", "var(--night)"],
     step: 1.5,
     from: 3,
     to: 3 + length,
